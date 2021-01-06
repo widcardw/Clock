@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Clock
-Wed Jan 06 14:51:11 2021
+Wed Jan 06 20:59:22 2021
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -13,10 +13,11 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "Counter6:USec1"
- 11. Analysis & Synthesis Messages
+  8. User-Specified and Inferred Latches
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "Counter6:USec1"
+ 12. Analysis & Synthesis Messages
 
 
 
@@ -42,15 +43,15 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                      ;
 +------------------------------------+----------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Jan 06 14:51:11 2021        ;
+; Analysis & Synthesis Status        ; Successful - Wed Jan 06 20:59:22 2021        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Clock                                        ;
 ; Top-level Entity Name              ; Clock                                        ;
 ; Family                             ; Cyclone II                                   ;
-; Total logic elements               ; 163                                          ;
-;     Total combinational functions  ; 163                                          ;
-;     Dedicated logic registers      ; 56                                           ;
-; Total registers                    ; 56                                           ;
+; Total logic elements               ; 179                                          ;
+;     Total combinational functions  ; 179                                          ;
+;     Dedicated logic registers      ; 40                                           ;
+; Total registers                    ; 40                                           ;
 ; Total pins                         ; 115                                          ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0                                            ;
@@ -166,25 +167,25 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+-------+
 ; Resource                                    ; Usage ;
 +---------------------------------------------+-------+
-; Estimated Total logic elements              ; 163   ;
+; Estimated Total logic elements              ; 179   ;
 ;                                             ;       ;
-; Total combinational functions               ; 163   ;
+; Total combinational functions               ; 179   ;
 ; Logic element usage by number of LUT inputs ;       ;
 ;     -- 4 input functions                    ; 92    ;
-;     -- 3 input functions                    ; 51    ;
+;     -- 3 input functions                    ; 67    ;
 ;     -- <=2 input functions                  ; 20    ;
 ;                                             ;       ;
 ; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 145   ;
+;     -- normal mode                          ; 161   ;
 ;     -- arithmetic mode                      ; 18    ;
 ;                                             ;       ;
-; Total registers                             ; 56    ;
-;     -- Dedicated logic registers            ; 56    ;
+; Total registers                             ; 40    ;
+;     -- Dedicated logic registers            ; 40    ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
 ; I/O pins                                    ; 115   ;
-; Maximum fan-out node                        ; CP    ;
-; Maximum fan-out                             ; 44    ;
+; Maximum fan-out node                        ; nCR   ;
+; Maximum fan-out                             ; 40    ;
 ; Total fan-out                               ; 863   ;
 ; Average fan-out                             ; 2.58  ;
 +---------------------------------------------+-------+
@@ -195,9 +196,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------+--------------+
-; |Clock                     ; 163 (24)          ; 56 (0)       ; 0           ; 0            ; 0       ; 0         ; 115  ; 0            ; |Clock                             ; work         ;
+; |Clock                     ; 179 (24)          ; 40 (0)       ; 0           ; 0            ; 0       ; 0         ; 115  ; 0            ; |Clock                             ; work         ;
 ;    |BellAlarm:Ba0|         ; 12 (12)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|BellAlarm:Ba0               ;              ;
-;    |BellSet:Bs0|           ; 48 (20)           ; 32 (16)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|BellSet:Bs0                 ;              ;
+;    |BellSet:Bs0|           ; 64 (36)           ; 16 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|BellSet:Bs0                 ;              ;
 ;       |Counter10:BMin0|    ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|BellSet:Bs0|Counter10:BMin0 ;              ;
 ;       |Counter12:BHou|     ; 17 (17)           ; 8 (8)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|BellSet:Bs0|Counter12:BHou  ;              ;
 ;       |Counter6:BMin1|     ; 6 (6)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Clock|BellSet:Bs0|Counter6:BMin1  ;              ;
@@ -213,17 +214,43 @@ Parallel compilation was disabled, but you have multiple processors available. E
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
++----------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                ;
++-----------------------------------------------------+---------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal ; Free of Timing Hazards ;
++-----------------------------------------------------+---------------------+------------------------+
+; BellSet:Bs0|MinhBell[0]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|MinhBell[1]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|MinhBell[2]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|MinhBell[3]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|MinlBell[0]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|MinlBell[1]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|MinlBell[2]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|MinlBell[3]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HouhBell[0]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HouhBell[1]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HouhBell[2]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HouhBell[3]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HoulBell[0]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HoulBell[1]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HoulBell[2]                             ; SetBellMode         ; yes                    ;
+; BellSet:Bs0|HoulBell[3]                             ; SetBellMode         ; yes                    ;
+; Number of user-specified and inferred latches = 16  ;                     ;                        ;
++-----------------------------------------------------+---------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
 +------------------------------------------------------+
 ; General Register Statistics                          ;
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 56    ;
+; Total registers                              ; 40    ;
 ; Number of registers using Synchronous Clear  ; 8     ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 40    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 50    ;
+; Number of registers using Clock Enable       ; 34    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -255,7 +282,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Analysis & Synthesis
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jan 06 14:51:10 2021
+    Info: Processing started: Wed Jan 06 20:59:21 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Clock -c Clock
 Info: Found 1 design units, including 1 entities, in source file clock.v
     Info: Found entity 1: Clock
@@ -283,6 +310,26 @@ Info: Elaborating entity "Counter10" for hierarchy "Counter10:USec0"
 Info: Elaborating entity "Counter6" for hierarchy "Counter6:USec1"
 Info: Elaborating entity "Counter12" for hierarchy "Counter12:UHou"
 Info: Elaborating entity "BellSet" for hierarchy "BellSet:Bs0"
+Warning (10240): Verilog HDL Always Construct warning at BellCtrl.v(20): inferring latch(es) for variable "MinhBell", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at BellCtrl.v(20): inferring latch(es) for variable "MinlBell", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at BellCtrl.v(20): inferring latch(es) for variable "HouhBell", which holds its previous value in one or more paths through the always construct
+Warning (10240): Verilog HDL Always Construct warning at BellCtrl.v(20): inferring latch(es) for variable "HoulBell", which holds its previous value in one or more paths through the always construct
+Info (10041): Inferred latch for "HoulBell[0]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "HoulBell[1]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "HoulBell[2]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "HoulBell[3]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "HouhBell[0]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "HouhBell[1]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "HouhBell[2]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "HouhBell[3]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinlBell[0]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinlBell[1]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinlBell[2]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinlBell[3]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinhBell[0]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinhBell[1]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinhBell[2]" at BellCtrl.v(20)
+Info (10041): Inferred latch for "MinhBell[3]" at BellCtrl.v(20)
 Info: Elaborating entity "BellAlarm" for hierarchy "BellAlarm:Ba0"
 Info: Elaborating entity "_BCDto7LED" for hierarchy "_BCDto7LED:Ssec"
 Warning: Output pins are stuck at VCC or GND
@@ -292,14 +339,14 @@ Warning: Output pins are stuck at VCC or GND
     Warning (13410): Pin "segM[15]" is stuck at VCC
     Warning (13410): Pin "segH[7]" is stuck at VCC
     Warning (13410): Pin "segH[15]" is stuck at VCC
-Info: Implemented 278 device resources after synthesis - the final resource count might be different
+Info: Implemented 294 device resources after synthesis - the final resource count might be different
     Info: Implemented 9 input pins
     Info: Implemented 106 output pins
-    Info: Implemented 163 logic cells
-Info: Quartus II Analysis & Synthesis was successful. 0 errors, 11 warnings
+    Info: Implemented 179 logic cells
+Info: Quartus II Analysis & Synthesis was successful. 0 errors, 15 warnings
     Info: Peak virtual memory: 230 megabytes
-    Info: Processing ended: Wed Jan 06 14:51:11 2021
+    Info: Processing ended: Wed Jan 06 20:59:22 2021
     Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:03
+    Info: Total CPU time (on all processors): 00:00:01
 
 

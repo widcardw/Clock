@@ -1,0 +1,1115 @@
+Classic Timing Analyzer report for Clock
+Wed Jan 06 20:59:34 2021
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'Adj_H'
+  7. Clock Setup: 'CP'
+  8. Clock Setup: 'Adj_M'
+  9. tsu
+ 10. tco
+ 11. tpd
+ 12. th
+ 13. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                              ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                             ; To                               ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.586 ns                         ; SetBellMode                      ; BellSet:Bs0|Counter12:BHou|ql[1] ; --         ; CP       ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 18.877 ns                        ; Counter10:UMin0|Q[2]             ; segM[3]                          ; CP         ; --       ; 0            ;
+; Worst-case tpd               ; N/A   ; None          ; 18.295 ns                        ; SetBellMode                      ; segM[13]                         ; --         ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -0.313 ns                        ; Adj_H                            ; Counter12:UHou|qh[2]             ; --         ; CP       ; 0            ;
+; Clock Setup: 'CP'            ; N/A   ; None          ; 287.19 MHz ( period = 3.482 ns ) ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; 0            ;
+; Clock Setup: 'Adj_H'         ; N/A   ; None          ; 337.27 MHz ( period = 2.965 ns ) ; Counter12:UHou|qh[1]             ; Counter12:UHou|qh[2]             ; Adj_H      ; Adj_H    ; 0            ;
+; Clock Setup: 'Adj_M'         ; N/A   ; None          ; 354.36 MHz ( period = 2.822 ns ) ; Counter10:UMin0|Q[2]             ; Counter6:UMin1|Q[0]              ; Adj_M      ; Adj_M    ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                                  ;                                  ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+----------------------------------+----------------------------------+------------+----------+--------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                                                            ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                                                               ; Setting            ; From ; To ; Entity Name ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                                                          ; EP2C70F896C6       ;      ;    ;             ;
+; Timing Models                                                                                        ; Final              ;      ;    ;             ;
+; Default hold multicycle                                                                              ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                                                            ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                                                               ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                                                       ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                                                     ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                                                                ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                                                              ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                                                     ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                                                 ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                                                        ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                                                    ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                                                    ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node                                                ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                                                                ; 10                 ;      ;    ;             ;
+; Number of paths to report                                                                            ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                                                         ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                                                               ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                                                           ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                                                         ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis                                       ; Off                ;      ;    ;             ;
+; Reports worst-case timing paths for each clock domain and analysis                                   ; On                 ;      ;    ;             ;
+; Specifies the maximum number of worst-case timing paths to report for each clock domain and analysis ; 100                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation                                  ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                                                           ; Near End           ;      ;    ;             ;
++------------------------------------------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Adj_H           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; CP              ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; Adj_M           ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
+; SetBellMode     ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Adj_H'                                                                                                                                                                                             ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                 ; To                   ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 337.27 MHz ( period = 2.965 ns )               ; Counter12:UHou|qh[1] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.751 ns                ;
+; N/A   ; 337.27 MHz ( period = 2.965 ns )               ; Counter12:UHou|qh[1] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.751 ns                ;
+; N/A   ; 337.27 MHz ( period = 2.965 ns )               ; Counter12:UHou|qh[1] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.751 ns                ;
+; N/A   ; 337.27 MHz ( period = 2.965 ns )               ; Counter12:UHou|qh[1] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.751 ns                ;
+; N/A   ; 338.29 MHz ( period = 2.956 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.745 ns                ;
+; N/A   ; 338.29 MHz ( period = 2.956 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.745 ns                ;
+; N/A   ; 338.29 MHz ( period = 2.956 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.745 ns                ;
+; N/A   ; 338.29 MHz ( period = 2.956 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.745 ns                ;
+; N/A   ; 339.79 MHz ( period = 2.943 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.732 ns                ;
+; N/A   ; 339.79 MHz ( period = 2.943 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.732 ns                ;
+; N/A   ; 339.79 MHz ( period = 2.943 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.732 ns                ;
+; N/A   ; 339.79 MHz ( period = 2.943 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.732 ns                ;
+; N/A   ; 341.76 MHz ( period = 2.926 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.715 ns                ;
+; N/A   ; 341.76 MHz ( period = 2.926 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.715 ns                ;
+; N/A   ; 341.76 MHz ( period = 2.926 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.715 ns                ;
+; N/A   ; 341.76 MHz ( period = 2.926 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.715 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|qh[2] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.619 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|qh[2] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.619 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|qh[2] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.619 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.622 ns                ;
+; N/A   ; 352.98 MHz ( period = 2.833 ns )               ; Counter12:UHou|qh[2] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.619 ns                ;
+; N/A   ; 353.98 MHz ( period = 2.825 ns )               ; Counter12:UHou|qh[3] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.611 ns                ;
+; N/A   ; 353.98 MHz ( period = 2.825 ns )               ; Counter12:UHou|qh[3] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.611 ns                ;
+; N/A   ; 353.98 MHz ( period = 2.825 ns )               ; Counter12:UHou|qh[3] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.611 ns                ;
+; N/A   ; 353.98 MHz ( period = 2.825 ns )               ; Counter12:UHou|qh[3] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.611 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.317 ns                ;
+; N/A   ; 395.10 MHz ( period = 2.531 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.317 ns                ;
+; N/A   ; 395.57 MHz ( period = 2.528 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.314 ns                ;
+; N/A   ; 395.73 MHz ( period = 2.527 ns )               ; Counter12:UHou|ql[3] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.313 ns                ;
+; N/A   ; 397.61 MHz ( period = 2.515 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.301 ns                ;
+; N/A   ; 406.83 MHz ( period = 2.458 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.244 ns                ;
+; N/A   ; 412.20 MHz ( period = 2.426 ns )               ; Counter12:UHou|qh[0] ; Counter12:UHou|qh[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.212 ns                ;
+; N/A   ; 412.20 MHz ( period = 2.426 ns )               ; Counter12:UHou|qh[0] ; Counter12:UHou|qh[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.212 ns                ;
+; N/A   ; 412.20 MHz ( period = 2.426 ns )               ; Counter12:UHou|qh[0] ; Counter12:UHou|qh[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.212 ns                ;
+; N/A   ; 412.20 MHz ( period = 2.426 ns )               ; Counter12:UHou|qh[0] ; Counter12:UHou|qh[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.212 ns                ;
+; N/A   ; 418.59 MHz ( period = 2.389 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.175 ns                ;
+; N/A   ; 419.11 MHz ( period = 2.386 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.172 ns                ;
+; N/A   ; 419.29 MHz ( period = 2.385 ns )               ; Counter12:UHou|ql[2] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.171 ns                ;
+; N/A   ; 420.34 MHz ( period = 2.379 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.165 ns                ;
+; N/A   ; 420.88 MHz ( period = 2.376 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.162 ns                ;
+; N/A   ; 421.05 MHz ( period = 2.375 ns )               ; Counter12:UHou|ql[0] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.161 ns                ;
+; N/A   ; 425.71 MHz ( period = 2.349 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.135 ns                ;
+; N/A   ; 425.71 MHz ( period = 2.349 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.135 ns                ;
+; N/A   ; 426.26 MHz ( period = 2.346 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.132 ns                ;
+; N/A   ; 426.44 MHz ( period = 2.345 ns )               ; Counter12:UHou|ql[1] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 2.131 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[1] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.869 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[1] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.869 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[1] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.866 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[1] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.865 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[2] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.737 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[2] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.737 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[2] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.734 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[2] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.733 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[3] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.729 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[3] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.729 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[3] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.726 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[3] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.725 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[0] ; Counter12:UHou|ql[0] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.495 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[0] ; Counter12:UHou|ql[2] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.495 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[0] ; Counter12:UHou|ql[3] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.492 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter12:UHou|qh[0] ; Counter12:UHou|ql[1] ; Adj_H      ; Adj_H    ; None                        ; None                      ; 1.491 ns                ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'CP'                                                                                                                                                                                                                                                               ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                             ; To                               ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 287.19 MHz ( period = 3.482 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 3.268 ns                ;
+; N/A                                     ; 300.93 MHz ( period = 3.323 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 3.109 ns                ;
+; N/A                                     ; 307.22 MHz ( period = 3.255 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[2] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 3.041 ns                ;
+; N/A                                     ; 307.50 MHz ( period = 3.252 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 3.038 ns                ;
+; N/A                                     ; 316.86 MHz ( period = 3.156 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[3] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.942 ns                ;
+; N/A                                     ; 316.86 MHz ( period = 3.156 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[3] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.942 ns                ;
+; N/A                                     ; 316.86 MHz ( period = 3.156 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[3] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.942 ns                ;
+; N/A                                     ; 316.86 MHz ( period = 3.156 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[3] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.942 ns                ;
+; N/A                                     ; 318.88 MHz ( period = 3.136 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[2] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.922 ns                ;
+; N/A                                     ; 318.88 MHz ( period = 3.136 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[2] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.922 ns                ;
+; N/A                                     ; 318.88 MHz ( period = 3.136 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[2] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.922 ns                ;
+; N/A                                     ; 327.01 MHz ( period = 3.058 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 3.039 ns                ;
+; N/A                                     ; 327.01 MHz ( period = 3.058 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 3.039 ns                ;
+; N/A                                     ; 327.01 MHz ( period = 3.058 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 3.039 ns                ;
+; N/A                                     ; 327.01 MHz ( period = 3.058 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 3.039 ns                ;
+; N/A                                     ; 332.67 MHz ( period = 3.006 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 2.987 ns                ;
+; N/A                                     ; 332.67 MHz ( period = 3.006 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 2.987 ns                ;
+; N/A                                     ; 332.67 MHz ( period = 3.006 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 2.987 ns                ;
+; N/A                                     ; 332.67 MHz ( period = 3.006 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 2.987 ns                ;
+; N/A                                     ; 333.67 MHz ( period = 2.997 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[1] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.783 ns                ;
+; N/A                                     ; 337.27 MHz ( period = 2.965 ns )                    ; Counter12:UHou|qh[1]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.751 ns                ;
+; N/A                                     ; 337.27 MHz ( period = 2.965 ns )                    ; Counter12:UHou|qh[1]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.751 ns                ;
+; N/A                                     ; 337.27 MHz ( period = 2.965 ns )                    ; Counter12:UHou|qh[1]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.751 ns                ;
+; N/A                                     ; 337.27 MHz ( period = 2.965 ns )                    ; Counter12:UHou|qh[1]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.751 ns                ;
+; N/A                                     ; 338.29 MHz ( period = 2.956 ns )                    ; Counter12:UHou|ql[0]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.745 ns                ;
+; N/A                                     ; 338.29 MHz ( period = 2.956 ns )                    ; Counter12:UHou|ql[0]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.745 ns                ;
+; N/A                                     ; 338.29 MHz ( period = 2.956 ns )                    ; Counter12:UHou|ql[0]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.745 ns                ;
+; N/A                                     ; 338.29 MHz ( period = 2.956 ns )                    ; Counter12:UHou|ql[0]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.745 ns                ;
+; N/A                                     ; 339.79 MHz ( period = 2.943 ns )                    ; Counter12:UHou|ql[2]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.732 ns                ;
+; N/A                                     ; 339.79 MHz ( period = 2.943 ns )                    ; Counter12:UHou|ql[2]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.732 ns                ;
+; N/A                                     ; 339.79 MHz ( period = 2.943 ns )                    ; Counter12:UHou|ql[2]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.732 ns                ;
+; N/A                                     ; 339.79 MHz ( period = 2.943 ns )                    ; Counter12:UHou|ql[2]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.732 ns                ;
+; N/A                                     ; 340.48 MHz ( period = 2.937 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 2.918 ns                ;
+; N/A                                     ; 340.48 MHz ( period = 2.937 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 2.918 ns                ;
+; N/A                                     ; 340.48 MHz ( period = 2.937 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 2.918 ns                ;
+; N/A                                     ; 340.48 MHz ( period = 2.937 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 2.918 ns                ;
+; N/A                                     ; 340.83 MHz ( period = 2.934 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP         ; CP       ; None                        ; None                      ; 2.723 ns                ;
+; N/A                                     ; 340.83 MHz ( period = 2.934 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP         ; CP       ; None                        ; None                      ; 2.723 ns                ;
+; N/A                                     ; 340.83 MHz ( period = 2.934 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP         ; CP       ; None                        ; None                      ; 2.723 ns                ;
+; N/A                                     ; 340.83 MHz ( period = 2.934 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP         ; CP       ; None                        ; None                      ; 2.723 ns                ;
+; N/A                                     ; 341.76 MHz ( period = 2.926 ns )                    ; Counter12:UHou|ql[1]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.715 ns                ;
+; N/A                                     ; 341.76 MHz ( period = 2.926 ns )                    ; Counter12:UHou|ql[1]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.715 ns                ;
+; N/A                                     ; 341.76 MHz ( period = 2.926 ns )                    ; Counter12:UHou|ql[1]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.715 ns                ;
+; N/A                                     ; 341.76 MHz ( period = 2.926 ns )                    ; Counter12:UHou|ql[1]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.715 ns                ;
+; N/A                                     ; 344.47 MHz ( period = 2.903 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 2.883 ns                ;
+; N/A                                     ; 344.47 MHz ( period = 2.903 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 2.883 ns                ;
+; N/A                                     ; 344.47 MHz ( period = 2.903 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 2.883 ns                ;
+; N/A                                     ; 344.47 MHz ( period = 2.903 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 2.883 ns                ;
+; N/A                                     ; 345.07 MHz ( period = 2.898 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[2] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.684 ns                ;
+; N/A                                     ; 345.07 MHz ( period = 2.898 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[2] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.684 ns                ;
+; N/A                                     ; 345.07 MHz ( period = 2.898 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[2] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.684 ns                ;
+; N/A                                     ; 345.07 MHz ( period = 2.898 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[2] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.684 ns                ;
+; N/A                                     ; 347.46 MHz ( period = 2.878 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.862 ns                ;
+; N/A                                     ; 347.46 MHz ( period = 2.878 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.862 ns                ;
+; N/A                                     ; 347.46 MHz ( period = 2.878 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.862 ns                ;
+; N/A                                     ; 347.46 MHz ( period = 2.878 ns )                    ; Counter10:UMin0|Q[2]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.862 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.859 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.859 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.859 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; Counter6:UMin1|Q[2]              ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.859 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP         ; CP       ; None                        ; None                      ; 2.662 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP         ; CP       ; None                        ; None                      ; 2.662 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP         ; CP       ; None                        ; None                      ; 2.662 ns                ;
+; N/A                                     ; 347.71 MHz ( period = 2.876 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP         ; CP       ; None                        ; None                      ; 2.662 ns                ;
+; N/A                                     ; 349.41 MHz ( period = 2.862 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.651 ns                ;
+; N/A                                     ; 349.41 MHz ( period = 2.862 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.651 ns                ;
+; N/A                                     ; 349.41 MHz ( period = 2.862 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.651 ns                ;
+; N/A                                     ; 349.41 MHz ( period = 2.862 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.651 ns                ;
+; N/A                                     ; 350.51 MHz ( period = 2.853 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[1] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.639 ns                ;
+; N/A                                     ; 350.51 MHz ( period = 2.853 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[1] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.639 ns                ;
+; N/A                                     ; 350.51 MHz ( period = 2.853 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[1] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.639 ns                ;
+; N/A                                     ; 352.36 MHz ( period = 2.838 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.624 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|ql[3]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|qh[2]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.619 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|ql[3]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|qh[2]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.619 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|ql[3]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|qh[2]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.619 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|ql[3]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.622 ns                ;
+; N/A                                     ; 352.98 MHz ( period = 2.833 ns )                    ; Counter12:UHou|qh[2]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.619 ns                ;
+; N/A                                     ; 353.86 MHz ( period = 2.826 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.810 ns                ;
+; N/A                                     ; 353.86 MHz ( period = 2.826 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.810 ns                ;
+; N/A                                     ; 353.86 MHz ( period = 2.826 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.810 ns                ;
+; N/A                                     ; 353.86 MHz ( period = 2.826 ns )                    ; Counter10:UMin0|Q[0]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.810 ns                ;
+; N/A                                     ; 353.98 MHz ( period = 2.825 ns )                    ; Counter12:UHou|qh[3]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.611 ns                ;
+; N/A                                     ; 353.98 MHz ( period = 2.825 ns )                    ; Counter12:UHou|qh[3]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.611 ns                ;
+; N/A                                     ; 353.98 MHz ( period = 2.825 ns )                    ; Counter12:UHou|qh[3]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.611 ns                ;
+; N/A                                     ; 353.98 MHz ( period = 2.825 ns )                    ; Counter12:UHou|qh[3]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.611 ns                ;
+; N/A                                     ; 354.36 MHz ( period = 2.822 ns )                    ; Counter10:UMin0|Q[2]             ; Counter6:UMin1|Q[2]              ; CP         ; CP       ; None                        ; None                      ; 2.609 ns                ;
+; N/A                                     ; 354.36 MHz ( period = 2.822 ns )                    ; Counter10:UMin0|Q[2]             ; Counter6:UMin1|Q[1]              ; CP         ; CP       ; None                        ; None                      ; 2.609 ns                ;
+; N/A                                     ; 354.36 MHz ( period = 2.822 ns )                    ; Counter10:UMin0|Q[2]             ; Counter6:UMin1|Q[0]              ; CP         ; CP       ; None                        ; None                      ; 2.609 ns                ;
+; N/A                                     ; 356.63 MHz ( period = 2.804 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.590 ns                ;
+; N/A                                     ; 356.63 MHz ( period = 2.804 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.590 ns                ;
+; N/A                                     ; 356.63 MHz ( period = 2.804 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.590 ns                ;
+; N/A                                     ; 356.63 MHz ( period = 2.804 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.590 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[3] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.585 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[3] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.585 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[3] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.585 ns                ;
+; N/A                                     ; 357.27 MHz ( period = 2.799 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[3] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.585 ns                ;
+; N/A                                     ; 360.62 MHz ( period = 2.773 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 2.754 ns                ;
+; N/A                                     ; 360.62 MHz ( period = 2.773 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 2.754 ns                ;
+; N/A                                     ; 360.62 MHz ( period = 2.773 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 2.754 ns                ;
+; N/A                                     ; 360.62 MHz ( period = 2.773 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 2.754 ns                ;
+; N/A                                     ; 360.75 MHz ( period = 2.772 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP         ; CP       ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 360.75 MHz ( period = 2.772 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP         ; CP       ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 360.75 MHz ( period = 2.772 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP         ; CP       ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 360.75 MHz ( period = 2.772 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP         ; CP       ; None                        ; None                      ; 2.561 ns                ;
+; N/A                                     ; 361.01 MHz ( period = 2.770 ns )                    ; Counter10:UMin0|Q[0]             ; Counter6:UMin1|Q[2]              ; CP         ; CP       ; None                        ; None                      ; 2.557 ns                ;
+; N/A                                     ; 361.01 MHz ( period = 2.770 ns )                    ; Counter10:UMin0|Q[0]             ; Counter6:UMin1|Q[1]              ; CP         ; CP       ; None                        ; None                      ; 2.557 ns                ;
+; N/A                                     ; 361.01 MHz ( period = 2.770 ns )                    ; Counter10:UMin0|Q[0]             ; Counter6:UMin1|Q[0]              ; CP         ; CP       ; None                        ; None                      ; 2.557 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.549 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.549 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.549 ns                ;
+; N/A                                     ; 361.93 MHz ( period = 2.763 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.549 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.741 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.741 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.741 ns                ;
+; N/A                                     ; 362.71 MHz ( period = 2.757 ns )                    ; Counter10:UMin0|Q[1]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.741 ns                ;
+; N/A                                     ; 363.11 MHz ( period = 2.754 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 6.512 ns                ;
+; N/A                                     ; 363.11 MHz ( period = 2.754 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 6.512 ns                ;
+; N/A                                     ; 363.11 MHz ( period = 2.754 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 6.512 ns                ;
+; N/A                                     ; 363.11 MHz ( period = 2.754 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 6.512 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 2.728 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 2.728 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 2.728 ns                ;
+; N/A                                     ; 364.03 MHz ( period = 2.747 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 2.728 ns                ;
+; N/A                                     ; 364.56 MHz ( period = 2.743 ns )                    ; Counter10:USec0|Q[2]             ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 6.501 ns                ;
+; N/A                                     ; 364.56 MHz ( period = 2.743 ns )                    ; Counter10:USec0|Q[2]             ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 6.501 ns                ;
+; N/A                                     ; 364.56 MHz ( period = 2.743 ns )                    ; Counter10:USec0|Q[2]             ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 6.501 ns                ;
+; N/A                                     ; 364.56 MHz ( period = 2.743 ns )                    ; Counter10:USec0|Q[2]             ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 6.501 ns                ;
+; N/A                                     ; 367.65 MHz ( period = 2.720 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.704 ns                ;
+; N/A                                     ; 367.65 MHz ( period = 2.720 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.704 ns                ;
+; N/A                                     ; 367.65 MHz ( period = 2.720 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.704 ns                ;
+; N/A                                     ; 367.65 MHz ( period = 2.720 ns )                    ; Counter6:UMin1|Q[3]              ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.704 ns                ;
+; N/A                                     ; 370.23 MHz ( period = 2.701 ns )                    ; Counter10:UMin0|Q[1]             ; Counter6:UMin1|Q[2]              ; CP         ; CP       ; None                        ; None                      ; 2.488 ns                ;
+; N/A                                     ; 370.23 MHz ( period = 2.701 ns )                    ; Counter10:UMin0|Q[1]             ; Counter6:UMin1|Q[1]              ; CP         ; CP       ; None                        ; None                      ; 2.488 ns                ;
+; N/A                                     ; 370.23 MHz ( period = 2.701 ns )                    ; Counter10:UMin0|Q[1]             ; Counter6:UMin1|Q[0]              ; CP         ; CP       ; None                        ; None                      ; 2.488 ns                ;
+; N/A                                     ; 370.37 MHz ( period = 2.700 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.489 ns                ;
+; N/A                                     ; 370.37 MHz ( period = 2.700 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.489 ns                ;
+; N/A                                     ; 370.37 MHz ( period = 2.700 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.489 ns                ;
+; N/A                                     ; 370.37 MHz ( period = 2.700 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[3] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.489 ns                ;
+; N/A                                     ; 372.86 MHz ( period = 2.682 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.468 ns                ;
+; N/A                                     ; 372.86 MHz ( period = 2.682 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.468 ns                ;
+; N/A                                     ; 372.86 MHz ( period = 2.682 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.468 ns                ;
+; N/A                                     ; 372.86 MHz ( period = 2.682 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.468 ns                ;
+; N/A                                     ; 375.66 MHz ( period = 2.662 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[1] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.66 MHz ( period = 2.662 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[1] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.66 MHz ( period = 2.662 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[1] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 375.66 MHz ( period = 2.662 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[1] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.448 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; Counter10:USec0|Q[1]             ; Counter6:USec1|Q[0]              ; CP         ; CP       ; None                        ; None                      ; 2.457 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; Counter10:USec0|Q[1]             ; Counter6:USec1|Q[2]              ; CP         ; CP       ; None                        ; None                      ; 2.457 ns                ;
+; N/A                                     ; 377.22 MHz ( period = 2.651 ns )                    ; Counter10:USec0|Q[1]             ; Counter6:USec1|Q[1]              ; CP         ; CP       ; None                        ; None                      ; 2.457 ns                ;
+; N/A                                     ; 378.64 MHz ( period = 2.641 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP         ; CP       ; None                        ; None                      ; 2.430 ns                ;
+; N/A                                     ; 378.64 MHz ( period = 2.641 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP         ; CP       ; None                        ; None                      ; 2.430 ns                ;
+; N/A                                     ; 378.64 MHz ( period = 2.641 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[0] ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP         ; CP       ; None                        ; None                      ; 2.430 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; Counter10:USec0|Q[2]             ; Counter6:USec1|Q[0]              ; CP         ; CP       ; None                        ; None                      ; 2.446 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; Counter10:USec0|Q[2]             ; Counter6:USec1|Q[2]              ; CP         ; CP       ; None                        ; None                      ; 2.446 ns                ;
+; N/A                                     ; 378.79 MHz ( period = 2.640 ns )                    ; Counter10:USec0|Q[2]             ; Counter6:USec1|Q[1]              ; CP         ; CP       ; None                        ; None                      ; 2.446 ns                ;
+; N/A                                     ; 379.79 MHz ( period = 2.633 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[1] ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP         ; CP       ; None                        ; None                      ; 2.422 ns                ;
+; N/A                                     ; 379.79 MHz ( period = 2.633 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[1] ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP         ; CP       ; None                        ; None                      ; 2.422 ns                ;
+; N/A                                     ; 379.79 MHz ( period = 2.633 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[1] ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP         ; CP       ; None                        ; None                      ; 2.422 ns                ;
+; N/A                                     ; 379.79 MHz ( period = 2.633 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[1] ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP         ; CP       ; None                        ; None                      ; 2.422 ns                ;
+; N/A                                     ; 381.68 MHz ( period = 2.620 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP         ; CP       ; None                        ; None                      ; 2.406 ns                ;
+; N/A                                     ; 381.68 MHz ( period = 2.620 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP         ; CP       ; None                        ; None                      ; 2.406 ns                ;
+; N/A                                     ; 381.68 MHz ( period = 2.620 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[0] ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP         ; CP       ; None                        ; None                      ; 2.406 ns                ;
+; N/A                                     ; 381.97 MHz ( period = 2.618 ns )                    ; Counter10:USec0|Q[0]             ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 6.376 ns                ;
+; N/A                                     ; 381.97 MHz ( period = 2.618 ns )                    ; Counter10:USec0|Q[0]             ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 6.376 ns                ;
+; N/A                                     ; 381.97 MHz ( period = 2.618 ns )                    ; Counter10:USec0|Q[0]             ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 6.376 ns                ;
+; N/A                                     ; 381.97 MHz ( period = 2.618 ns )                    ; Counter10:USec0|Q[0]             ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 6.376 ns                ;
+; N/A                                     ; 385.51 MHz ( period = 2.594 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.380 ns                ;
+; N/A                                     ; 385.51 MHz ( period = 2.594 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.380 ns                ;
+; N/A                                     ; 385.51 MHz ( period = 2.594 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.380 ns                ;
+; N/A                                     ; 385.51 MHz ( period = 2.594 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.380 ns                ;
+; N/A                                     ; 385.65 MHz ( period = 2.593 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 2.577 ns                ;
+; N/A                                     ; 385.65 MHz ( period = 2.593 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 2.577 ns                ;
+; N/A                                     ; 385.65 MHz ( period = 2.593 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 2.577 ns                ;
+; N/A                                     ; 385.65 MHz ( period = 2.593 ns )                    ; Counter10:UMin0|Q[3]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 2.577 ns                ;
+; N/A                                     ; 386.70 MHz ( period = 2.586 ns )                    ; Counter6:UMin1|Q[1]              ; Counter12:UHou|ql[0]             ; CP         ; CP       ; None                        ; None                      ; 2.566 ns                ;
+; N/A                                     ; 386.70 MHz ( period = 2.586 ns )                    ; Counter6:UMin1|Q[1]              ; Counter12:UHou|ql[1]             ; CP         ; CP       ; None                        ; None                      ; 2.566 ns                ;
+; N/A                                     ; 386.70 MHz ( period = 2.586 ns )                    ; Counter6:UMin1|Q[1]              ; Counter12:UHou|ql[3]             ; CP         ; CP       ; None                        ; None                      ; 2.566 ns                ;
+; N/A                                     ; 386.70 MHz ( period = 2.586 ns )                    ; Counter6:UMin1|Q[1]              ; Counter12:UHou|ql[2]             ; CP         ; CP       ; None                        ; None                      ; 2.566 ns                ;
+; N/A                                     ; 387.00 MHz ( period = 2.584 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.370 ns                ;
+; N/A                                     ; 387.00 MHz ( period = 2.584 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.370 ns                ;
+; N/A                                     ; 387.00 MHz ( period = 2.584 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.370 ns                ;
+; N/A                                     ; 387.00 MHz ( period = 2.584 ns )                    ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.370 ns                ;
+; N/A                                     ; 387.15 MHz ( period = 2.583 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP         ; CP       ; None                        ; None                      ; 2.369 ns                ;
+; N/A                                     ; 387.15 MHz ( period = 2.583 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP         ; CP       ; None                        ; None                      ; 2.369 ns                ;
+; N/A                                     ; 387.15 MHz ( period = 2.583 ns )                    ; BellSet:Bs0|Counter10:BMin0|Q[2] ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP         ; CP       ; None                        ; None                      ; 2.369 ns                ;
+; N/A                                     ; 387.45 MHz ( period = 2.581 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[0] ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP         ; CP       ; None                        ; None                      ; 2.367 ns                ;
+; N/A                                     ; 387.45 MHz ( period = 2.581 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[0] ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP         ; CP       ; None                        ; None                      ; 2.367 ns                ;
+; N/A                                     ; 387.45 MHz ( period = 2.581 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[0] ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP         ; CP       ; None                        ; None                      ; 2.367 ns                ;
+; N/A                                     ; 387.45 MHz ( period = 2.581 ns )                    ; BellSet:Bs0|Counter12:BHou|qh[0] ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP         ; CP       ; None                        ; None                      ; 2.367 ns                ;
+; N/A                                     ; 388.50 MHz ( period = 2.574 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|qh[0]             ; CP         ; CP       ; None                        ; None                      ; 6.335 ns                ;
+; N/A                                     ; 388.50 MHz ( period = 2.574 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|qh[1]             ; CP         ; CP       ; None                        ; None                      ; 6.335 ns                ;
+; N/A                                     ; 388.50 MHz ( period = 2.574 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|qh[3]             ; CP         ; CP       ; None                        ; None                      ; 6.335 ns                ;
+; N/A                                     ; 388.50 MHz ( period = 2.574 ns )                    ; Counter10:USec0|Q[1]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 6.335 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[3] ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP         ; CP       ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 388.65 MHz ( period = 2.573 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[3] ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP         ; CP       ; None                        ; None                      ; 2.359 ns                ;
+; N/A                                     ; 389.41 MHz ( period = 2.568 ns )                    ; BellSet:Bs0|Counter12:BHou|ql[3] ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP         ; CP       ; None                        ; None                      ; 2.354 ns                ;
+; N/A                                     ; 390.17 MHz ( period = 2.563 ns )                    ; Counter10:USec0|Q[2]             ; Counter12:UHou|qh[2]             ; CP         ; CP       ; None                        ; None                      ; 6.324 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                                  ;                                  ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+----------------------------------+----------------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Adj_M'                                                                                                                                                                                             ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From                 ; To                   ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 354.36 MHz ( period = 2.822 ns )               ; Counter10:UMin0|Q[2] ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.609 ns                ;
+; N/A   ; 354.36 MHz ( period = 2.822 ns )               ; Counter10:UMin0|Q[2] ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.609 ns                ;
+; N/A   ; 354.36 MHz ( period = 2.822 ns )               ; Counter10:UMin0|Q[2] ; Counter6:UMin1|Q[0]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.609 ns                ;
+; N/A   ; 361.01 MHz ( period = 2.770 ns )               ; Counter10:UMin0|Q[0] ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.557 ns                ;
+; N/A   ; 361.01 MHz ( period = 2.770 ns )               ; Counter10:UMin0|Q[0] ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.557 ns                ;
+; N/A   ; 361.01 MHz ( period = 2.770 ns )               ; Counter10:UMin0|Q[0] ; Counter6:UMin1|Q[0]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.557 ns                ;
+; N/A   ; 370.23 MHz ( period = 2.701 ns )               ; Counter10:UMin0|Q[1] ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.488 ns                ;
+; N/A   ; 370.23 MHz ( period = 2.701 ns )               ; Counter10:UMin0|Q[1] ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.488 ns                ;
+; N/A   ; 370.23 MHz ( period = 2.701 ns )               ; Counter10:UMin0|Q[1] ; Counter6:UMin1|Q[0]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.488 ns                ;
+; N/A   ; 394.17 MHz ( period = 2.537 ns )               ; Counter10:UMin0|Q[3] ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.324 ns                ;
+; N/A   ; 394.17 MHz ( period = 2.537 ns )               ; Counter10:UMin0|Q[3] ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.324 ns                ;
+; N/A   ; 394.17 MHz ( period = 2.537 ns )               ; Counter10:UMin0|Q[3] ; Counter6:UMin1|Q[0]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.324 ns                ;
+; N/A   ; 434.59 MHz ( period = 2.301 ns )               ; Counter10:UMin0|Q[2] ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.087 ns                ;
+; N/A   ; 444.64 MHz ( period = 2.249 ns )               ; Counter10:UMin0|Q[0] ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 2.035 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[1] ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.966 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[1]  ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.841 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[3] ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.802 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[2]  ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.604 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[0]  ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.487 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[0] ; Counter10:UMin0|Q[2] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.442 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[3]  ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.379 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[3]  ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.379 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[0] ; Counter10:UMin0|Q[1] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.311 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[0] ; Counter10:UMin0|Q[3] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.309 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[1] ; Counter10:UMin0|Q[2] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.288 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[1] ; Counter10:UMin0|Q[3] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.228 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[2]  ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 1.022 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[3] ; Counter10:UMin0|Q[1] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.841 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[1]  ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.824 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[0]  ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.808 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[0]  ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.808 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[2] ; Counter10:UMin0|Q[1] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.762 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[2] ; Counter10:UMin0|Q[3] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.760 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[2]  ; Counter6:UMin1|Q[2]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[1]  ; Counter6:UMin1|Q[1]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[0]  ; Counter6:UMin1|Q[0]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter6:UMin1|Q[3]  ; Counter6:UMin1|Q[3]  ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[2] ; Counter10:UMin0|Q[2] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[0] ; Counter10:UMin0|Q[0] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[1] ; Counter10:UMin0|Q[1] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
+; N/A   ; Restricted to 450.05 MHz ( period = 2.222 ns ) ; Counter10:UMin0|Q[3] ; Counter10:UMin0|Q[3] ; Adj_M      ; Adj_M    ; None                        ; None                      ; 0.407 ns                ;
++-------+------------------------------------------------+----------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++----------------------------------------------------------------------------------------------------+
+; tsu                                                                                                ;
++-------+--------------+------------+------------------+----------------------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From             ; To                               ; To Clock ;
++-------+--------------+------------+------------------+----------------------------------+----------+
+; N/A   ; None         ; 6.586 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A   ; None         ; 6.586 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A   ; None         ; 6.586 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A   ; None         ; 6.586 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
+; N/A   ; None         ; 6.450 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A   ; None         ; 6.450 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A   ; None         ; 6.450 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A   ; None         ; 6.450 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
+; N/A   ; None         ; 6.407 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A   ; None         ; 6.407 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A   ; None         ; 6.407 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A   ; None         ; 6.407 ns   ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A   ; None         ; 6.366 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A   ; None         ; 6.366 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A   ; None         ; 6.366 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A   ; None         ; 6.366 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
+; N/A   ; None         ; 6.213 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A   ; None         ; 6.213 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A   ; None         ; 6.213 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A   ; None         ; 6.213 ns   ; EN               ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A   ; None         ; 6.006 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A   ; None         ; 6.006 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A   ; None         ; 6.006 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A   ; None         ; 6.006 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A   ; None         ; 5.949 ns   ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[0] ; CP       ;
+; N/A   ; None         ; 5.949 ns   ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[3] ; CP       ;
+; N/A   ; None         ; 5.949 ns   ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[1] ; CP       ;
+; N/A   ; None         ; 5.929 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A   ; None         ; 5.929 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A   ; None         ; 5.929 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A   ; None         ; 5.929 ns   ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
+; N/A   ; None         ; 5.925 ns   ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP       ;
+; N/A   ; None         ; 5.925 ns   ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP       ;
+; N/A   ; None         ; 5.925 ns   ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP       ;
+; N/A   ; None         ; 5.813 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[0] ; CP       ;
+; N/A   ; None         ; 5.813 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[3] ; CP       ;
+; N/A   ; None         ; 5.813 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[1] ; CP       ;
+; N/A   ; None         ; 5.729 ns   ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[0] ; CP       ;
+; N/A   ; None         ; 5.729 ns   ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[3] ; CP       ;
+; N/A   ; None         ; 5.729 ns   ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[1] ; CP       ;
+; N/A   ; None         ; 5.668 ns   ; EN               ; Counter10:USec0|Q[1]             ; CP       ;
+; N/A   ; None         ; 5.668 ns   ; EN               ; Counter10:USec0|Q[0]             ; CP       ;
+; N/A   ; None         ; 5.668 ns   ; EN               ; Counter10:USec0|Q[3]             ; CP       ;
+; N/A   ; None         ; 5.631 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A   ; None         ; 5.631 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A   ; None         ; 5.631 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A   ; None         ; 5.631 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A   ; None         ; 5.589 ns   ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP       ;
+; N/A   ; None         ; 5.589 ns   ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP       ;
+; N/A   ; None         ; 5.589 ns   ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP       ;
+; N/A   ; None         ; 5.565 ns   ; EN               ; Counter10:USec0|Q[2]             ; CP       ;
+; N/A   ; None         ; 5.410 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP       ;
+; N/A   ; None         ; 5.410 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP       ;
+; N/A   ; None         ; 5.410 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP       ;
+; N/A   ; None         ; 5.388 ns   ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[2] ; CP       ;
+; N/A   ; None         ; 5.388 ns   ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; CP       ;
+; N/A   ; None         ; 5.252 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[2] ; CP       ;
+; N/A   ; None         ; 5.252 ns   ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; CP       ;
+; N/A   ; None         ; 5.168 ns   ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[2] ; CP       ;
+; N/A   ; None         ; 5.168 ns   ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; CP       ;
+; N/A   ; None         ; 2.629 ns   ; Adj_M            ; Counter12:UHou|ql[0]             ; Adj_H    ;
+; N/A   ; None         ; 2.629 ns   ; Adj_M            ; Counter12:UHou|ql[1]             ; Adj_H    ;
+; N/A   ; None         ; 2.629 ns   ; Adj_M            ; Counter12:UHou|ql[3]             ; Adj_H    ;
+; N/A   ; None         ; 2.629 ns   ; Adj_M            ; Counter12:UHou|ql[2]             ; Adj_H    ;
+; N/A   ; None         ; 2.449 ns   ; Adj_M            ; Counter12:UHou|qh[0]             ; Adj_H    ;
+; N/A   ; None         ; 2.449 ns   ; Adj_M            ; Counter12:UHou|qh[1]             ; Adj_H    ;
+; N/A   ; None         ; 2.449 ns   ; Adj_M            ; Counter12:UHou|qh[3]             ; Adj_H    ;
+; N/A   ; None         ; 2.449 ns   ; Adj_M            ; Counter12:UHou|qh[2]             ; Adj_H    ;
+; N/A   ; None         ; 2.101 ns   ; Adj_M            ; Counter6:UMin1|Q[2]              ; Adj_M    ;
+; N/A   ; None         ; 2.101 ns   ; Adj_M            ; Counter6:UMin1|Q[1]              ; Adj_M    ;
+; N/A   ; None         ; 2.101 ns   ; Adj_M            ; Counter6:UMin1|Q[0]              ; Adj_M    ;
+; N/A   ; None         ; 1.763 ns   ; Adj_M            ; Counter10:UMin0|Q[2]             ; Adj_M    ;
+; N/A   ; None         ; 1.722 ns   ; Adj_M            ; Counter10:UMin0|Q[0]             ; Adj_M    ;
+; N/A   ; None         ; 1.722 ns   ; Adj_M            ; Counter10:UMin0|Q[1]             ; Adj_M    ;
+; N/A   ; None         ; 1.722 ns   ; Adj_M            ; Counter10:UMin0|Q[3]             ; Adj_M    ;
+; N/A   ; None         ; 1.698 ns   ; Adj_H            ; Counter12:UHou|ql[0]             ; Adj_H    ;
+; N/A   ; None         ; 1.698 ns   ; Adj_H            ; Counter12:UHou|ql[1]             ; Adj_H    ;
+; N/A   ; None         ; 1.698 ns   ; Adj_H            ; Counter12:UHou|ql[3]             ; Adj_H    ;
+; N/A   ; None         ; 1.698 ns   ; Adj_H            ; Counter12:UHou|ql[2]             ; Adj_H    ;
+; N/A   ; None         ; 1.633 ns   ; Adj_M            ; Counter12:UHou|ql[0]             ; CP       ;
+; N/A   ; None         ; 1.633 ns   ; Adj_M            ; Counter12:UHou|ql[1]             ; CP       ;
+; N/A   ; None         ; 1.633 ns   ; Adj_M            ; Counter12:UHou|ql[3]             ; CP       ;
+; N/A   ; None         ; 1.633 ns   ; Adj_M            ; Counter12:UHou|ql[2]             ; CP       ;
+; N/A   ; None         ; 1.580 ns   ; Adj_M            ; Counter6:UMin1|Q[3]              ; Adj_M    ;
+; N/A   ; None         ; 1.539 ns   ; Adj_H            ; Counter12:UHou|qh[0]             ; Adj_H    ;
+; N/A   ; None         ; 1.539 ns   ; Adj_H            ; Counter12:UHou|qh[1]             ; Adj_H    ;
+; N/A   ; None         ; 1.539 ns   ; Adj_H            ; Counter12:UHou|qh[3]             ; Adj_H    ;
+; N/A   ; None         ; 1.539 ns   ; Adj_H            ; Counter12:UHou|qh[2]             ; Adj_H    ;
+; N/A   ; None         ; 1.453 ns   ; Adj_M            ; Counter12:UHou|qh[0]             ; CP       ;
+; N/A   ; None         ; 1.453 ns   ; Adj_M            ; Counter12:UHou|qh[1]             ; CP       ;
+; N/A   ; None         ; 1.453 ns   ; Adj_M            ; Counter12:UHou|qh[3]             ; CP       ;
+; N/A   ; None         ; 1.453 ns   ; Adj_M            ; Counter12:UHou|qh[2]             ; CP       ;
+; N/A   ; None         ; 1.397 ns   ; Adj_M            ; Counter6:UMin1|Q[2]              ; CP       ;
+; N/A   ; None         ; 1.397 ns   ; Adj_M            ; Counter6:UMin1|Q[1]              ; CP       ;
+; N/A   ; None         ; 1.397 ns   ; Adj_M            ; Counter6:UMin1|Q[0]              ; CP       ;
+; N/A   ; None         ; 1.059 ns   ; Adj_M            ; Counter10:UMin0|Q[2]             ; CP       ;
+; N/A   ; None         ; 1.018 ns   ; Adj_M            ; Counter10:UMin0|Q[0]             ; CP       ;
+; N/A   ; None         ; 1.018 ns   ; Adj_M            ; Counter10:UMin0|Q[1]             ; CP       ;
+; N/A   ; None         ; 1.018 ns   ; Adj_M            ; Counter10:UMin0|Q[3]             ; CP       ;
+; N/A   ; None         ; 0.876 ns   ; Adj_M            ; Counter6:UMin1|Q[3]              ; CP       ;
+; N/A   ; None         ; 0.702 ns   ; Adj_H            ; Counter12:UHou|ql[0]             ; CP       ;
+; N/A   ; None         ; 0.702 ns   ; Adj_H            ; Counter12:UHou|ql[1]             ; CP       ;
+; N/A   ; None         ; 0.702 ns   ; Adj_H            ; Counter12:UHou|ql[3]             ; CP       ;
+; N/A   ; None         ; 0.702 ns   ; Adj_H            ; Counter12:UHou|ql[2]             ; CP       ;
+; N/A   ; None         ; 0.543 ns   ; Adj_H            ; Counter12:UHou|qh[0]             ; CP       ;
+; N/A   ; None         ; 0.543 ns   ; Adj_H            ; Counter12:UHou|qh[1]             ; CP       ;
+; N/A   ; None         ; 0.543 ns   ; Adj_H            ; Counter12:UHou|qh[3]             ; CP       ;
+; N/A   ; None         ; 0.543 ns   ; Adj_H            ; Counter12:UHou|qh[2]             ; CP       ;
++-------+--------------+------------+------------------+----------------------------------+----------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; tco                                                                                                                                                              ;
++-----------------------------------------+-----------------------------------------------------+------------+-------------------------+-------------+-------------+
+; Slack                                   ; Required tco                                        ; Actual tco ; From                    ; To          ; From Clock  ;
++-----------------------------------------+-----------------------------------------------------+------------+-------------------------+-------------+-------------+
+; N/A                                     ; None                                                ; 18.877 ns  ; Counter10:UMin0|Q[2]    ; segM[3]     ; CP          ;
+; N/A                                     ; None                                                ; 18.737 ns  ; Counter10:UMin0|Q[2]    ; segM[6]     ; CP          ;
+; N/A                                     ; None                                                ; 18.737 ns  ; Counter10:UMin0|Q[2]    ; segM[5]     ; CP          ;
+; N/A                                     ; None                                                ; 18.730 ns  ; Counter12:UHou|ql[1]    ; segH[3]     ; CP          ;
+; N/A                                     ; None                                                ; 18.721 ns  ; Counter12:UHou|ql[1]    ; segH[2]     ; CP          ;
+; N/A                                     ; None                                                ; 18.719 ns  ; Counter10:UMin0|Q[2]    ; segM[4]     ; CP          ;
+; N/A                                     ; None                                                ; 18.668 ns  ; Counter10:UMin0|Q[1]    ; segM[3]     ; CP          ;
+; N/A                                     ; None                                                ; 18.665 ns  ; Counter10:UMin0|Q[2]    ; segM[2]     ; CP          ;
+; N/A                                     ; None                                                ; 18.660 ns  ; Counter12:UHou|ql[1]    ; segH[0]     ; CP          ;
+; N/A                                     ; None                                                ; 18.652 ns  ; Counter6:UMin1|Q[1]     ; segM[13]    ; CP          ;
+; N/A                                     ; None                                                ; 18.580 ns  ; Counter6:UMin1|Q[3]     ; segM[13]    ; CP          ;
+; N/A                                     ; None                                                ; 18.531 ns  ; Counter12:UHou|ql[1]    ; segH[4]     ; CP          ;
+; N/A                                     ; None                                                ; 18.527 ns  ; Counter10:UMin0|Q[1]    ; segM[5]     ; CP          ;
+; N/A                                     ; None                                                ; 18.526 ns  ; Counter10:UMin0|Q[1]    ; segM[6]     ; CP          ;
+; N/A                                     ; None                                                ; 18.516 ns  ; Counter12:UHou|ql[1]    ; segH[5]     ; CP          ;
+; N/A                                     ; None                                                ; 18.507 ns  ; Counter10:UMin0|Q[1]    ; segM[4]     ; CP          ;
+; N/A                                     ; None                                                ; 18.497 ns  ; Counter12:UHou|ql[1]    ; segH[6]     ; CP          ;
+; N/A                                     ; None                                                ; 18.480 ns  ; Counter10:UMin0|Q[1]    ; segM[2]     ; CP          ;
+; N/A                                     ; None                                                ; 18.424 ns  ; Counter10:UMin0|Q[2]    ; segM[1]     ; CP          ;
+; N/A                                     ; None                                                ; 18.417 ns  ; Counter6:UMin1|Q[0]     ; segM[13]    ; CP          ;
+; N/A                                     ; None                                                ; 18.398 ns  ; Counter6:UMin1|Q[2]     ; segM[13]    ; CP          ;
+; N/A                                     ; None                                                ; 18.216 ns  ; Counter10:UMin0|Q[1]    ; segM[1]     ; CP          ;
+; N/A                                     ; None                                                ; 18.184 ns  ; Counter12:UHou|ql[1]    ; segH[1]     ; CP          ;
+; N/A                                     ; None                                                ; 18.173 ns  ; Counter10:UMin0|Q[2]    ; segM[3]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 18.033 ns  ; Counter10:UMin0|Q[2]    ; segM[6]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 18.033 ns  ; Counter10:UMin0|Q[2]    ; segM[5]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 18.015 ns  ; Counter10:UMin0|Q[2]    ; segM[4]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.964 ns  ; Counter10:UMin0|Q[1]    ; segM[3]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.961 ns  ; Counter10:UMin0|Q[2]    ; segM[2]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.948 ns  ; Counter6:UMin1|Q[1]     ; segM[13]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.918 ns  ; Counter10:UMin0|Q[3]    ; segM[3]     ; CP          ;
+; N/A                                     ; None                                                ; 17.876 ns  ; Counter6:UMin1|Q[3]     ; segM[13]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.823 ns  ; Counter10:UMin0|Q[1]    ; segM[5]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.822 ns  ; Counter10:UMin0|Q[1]    ; segM[6]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.803 ns  ; Counter10:UMin0|Q[1]    ; segM[4]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.778 ns  ; Counter10:UMin0|Q[3]    ; segM[6]     ; CP          ;
+; N/A                                     ; None                                                ; 17.777 ns  ; Counter10:UMin0|Q[3]    ; segM[5]     ; CP          ;
+; N/A                                     ; None                                                ; 17.776 ns  ; Counter10:UMin0|Q[1]    ; segM[2]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.757 ns  ; Counter10:UMin0|Q[3]    ; segM[4]     ; CP          ;
+; N/A                                     ; None                                                ; 17.734 ns  ; Counter12:UHou|ql[1]    ; segH[3]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 17.733 ns  ; Counter10:UMin0|Q[3]    ; segM[2]     ; CP          ;
+; N/A                                     ; None                                                ; 17.725 ns  ; Counter12:UHou|ql[1]    ; segH[2]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 17.720 ns  ; Counter10:UMin0|Q[2]    ; segM[1]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.713 ns  ; Counter6:UMin1|Q[0]     ; segM[13]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.694 ns  ; Counter6:UMin1|Q[2]     ; segM[13]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.664 ns  ; Counter12:UHou|ql[1]    ; segH[0]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 17.585 ns  ; Counter12:UHou|qh[2]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 17.570 ns  ; Counter12:UHou|ql[0]    ; segH[3]     ; CP          ;
+; N/A                                     ; None                                                ; 17.535 ns  ; Counter12:UHou|ql[1]    ; segH[4]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 17.533 ns  ; Counter12:UHou|ql[0]    ; segH[2]     ; CP          ;
+; N/A                                     ; None                                                ; 17.520 ns  ; Counter12:UHou|ql[1]    ; segH[5]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 17.512 ns  ; Counter10:UMin0|Q[1]    ; segM[1]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.501 ns  ; Counter12:UHou|ql[1]    ; segH[6]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 17.500 ns  ; Counter12:UHou|ql[0]    ; segH[0]     ; CP          ;
+; N/A                                     ; None                                                ; 17.465 ns  ; Counter10:UMin0|Q[3]    ; segM[1]     ; CP          ;
+; N/A                                     ; None                                                ; 17.412 ns  ; Counter12:UHou|qh[3]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 17.381 ns  ; Counter12:UHou|qh[1]    ; segH[13]    ; CP          ;
+; N/A                                     ; None                                                ; 17.364 ns  ; Counter12:UHou|ql[0]    ; segH[4]     ; CP          ;
+; N/A                                     ; None                                                ; 17.356 ns  ; Counter12:UHou|ql[0]    ; segH[5]     ; CP          ;
+; N/A                                     ; None                                                ; 17.337 ns  ; Counter12:UHou|qh[3]    ; segH[13]    ; CP          ;
+; N/A                                     ; None                                                ; 17.332 ns  ; Counter12:UHou|ql[0]    ; segH[6]     ; CP          ;
+; N/A                                     ; None                                                ; 17.291 ns  ; Counter12:UHou|qh[1]    ; segH[10]    ; CP          ;
+; N/A                                     ; None                                                ; 17.244 ns  ; Counter12:UHou|qh[3]    ; segH[10]    ; CP          ;
+; N/A                                     ; None                                                ; 17.230 ns  ; Counter12:UHou|qh[0]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 17.214 ns  ; Counter10:UMin0|Q[3]    ; segM[3]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.188 ns  ; Counter12:UHou|ql[1]    ; segH[1]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 17.170 ns  ; Counter6:UMin1|Q[1]     ; segM[14]    ; CP          ;
+; N/A                                     ; None                                                ; 17.126 ns  ; Counter12:UHou|qh[0]    ; segH[13]    ; CP          ;
+; N/A                                     ; None                                                ; 17.103 ns  ; Counter10:UMin0|Q[3]    ; MinlShow[3] ; CP          ;
+; N/A                                     ; None                                                ; 17.098 ns  ; Counter6:UMin1|Q[3]     ; segM[14]    ; CP          ;
+; N/A                                     ; None                                                ; 17.090 ns  ; Counter12:UHou|qh[1]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 17.081 ns  ; Counter12:UHou|qh[1]    ; segH[12]    ; CP          ;
+; N/A                                     ; None                                                ; 17.074 ns  ; Counter10:UMin0|Q[3]    ; segM[6]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.073 ns  ; Counter10:UMin0|Q[3]    ; segM[5]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.053 ns  ; Counter10:UMin0|Q[3]    ; segM[4]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.033 ns  ; Counter12:UHou|qh[0]    ; segH[10]    ; CP          ;
+; N/A                                     ; None                                                ; 17.029 ns  ; Counter12:UHou|qh[3]    ; segH[12]    ; CP          ;
+; N/A                                     ; None                                                ; 17.029 ns  ; Counter10:UMin0|Q[3]    ; segM[2]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 17.010 ns  ; Counter12:UHou|ql[0]    ; segH[1]     ; CP          ;
+; N/A                                     ; None                                                ; 16.936 ns  ; Counter6:UMin1|Q[0]     ; segM[14]    ; CP          ;
+; N/A                                     ; None                                                ; 16.916 ns  ; Counter6:UMin1|Q[2]     ; segM[14]    ; CP          ;
+; N/A                                     ; None                                                ; 16.821 ns  ; Counter12:UHou|qh[0]    ; segH[12]    ; CP          ;
+; N/A                                     ; None                                                ; 16.809 ns  ; Counter12:UHou|qh[1]    ; segH[14]    ; CP          ;
+; N/A                                     ; None                                                ; 16.805 ns  ; Counter12:UHou|qh[1]    ; segH[11]    ; CP          ;
+; N/A                                     ; None                                                ; 16.766 ns  ; Counter12:UHou|qh[3]    ; segH[14]    ; CP          ;
+; N/A                                     ; None                                                ; 16.761 ns  ; Counter10:UMin0|Q[3]    ; segM[1]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 16.728 ns  ; Counter12:UHou|qh[3]    ; segH[11]    ; CP          ;
+; N/A                                     ; None                                                ; 16.589 ns  ; Counter12:UHou|qh[2]    ; BellRadio   ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.574 ns  ; Counter12:UHou|ql[0]    ; segH[3]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.554 ns  ; Counter12:UHou|qh[0]    ; segH[14]    ; CP          ;
+; N/A                                     ; None                                                ; 16.549 ns  ; Counter12:UHou|ql[2]    ; segH[3]     ; CP          ;
+; N/A                                     ; None                                                ; 16.543 ns  ; Counter12:UHou|qh[0]    ; segH[11]    ; CP          ;
+; N/A                                     ; None                                                ; 16.537 ns  ; Counter12:UHou|ql[0]    ; segH[2]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.521 ns  ; Counter12:UHou|ql[2]    ; segH[2]     ; CP          ;
+; N/A                                     ; None                                                ; 16.504 ns  ; Counter12:UHou|ql[0]    ; segH[0]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.480 ns  ; Counter12:UHou|ql[2]    ; segH[0]     ; CP          ;
+; N/A                                     ; None                                                ; 16.471 ns  ; Counter12:UHou|ql[1]    ; HoulShow[1] ; CP          ;
+; N/A                                     ; None                                                ; 16.466 ns  ; Counter6:UMin1|Q[1]     ; segM[14]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 16.416 ns  ; Counter12:UHou|qh[3]    ; BellRadio   ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.399 ns  ; Counter10:UMin0|Q[3]    ; MinlShow[3] ; Adj_M       ;
+; N/A                                     ; None                                                ; 16.394 ns  ; Counter6:UMin1|Q[3]     ; segM[14]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 16.385 ns  ; Counter12:UHou|qh[1]    ; segH[13]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.378 ns  ; Counter12:UHou|qh[2]    ; segH[13]    ; CP          ;
+; N/A                                     ; None                                                ; 16.368 ns  ; Counter12:UHou|ql[0]    ; segH[4]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.360 ns  ; Counter12:UHou|ql[0]    ; segH[5]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.359 ns  ; Counter12:UHou|ql[2]    ; segH[4]     ; CP          ;
+; N/A                                     ; None                                                ; 16.341 ns  ; Counter12:UHou|qh[3]    ; segH[13]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.339 ns  ; Counter12:UHou|ql[2]    ; segH[5]     ; CP          ;
+; N/A                                     ; None                                                ; 16.336 ns  ; Counter12:UHou|ql[0]    ; segH[6]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.330 ns  ; Counter12:UHou|ql[2]    ; segH[6]     ; CP          ;
+; N/A                                     ; None                                                ; 16.295 ns  ; Counter12:UHou|qh[1]    ; segH[10]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.283 ns  ; Counter12:UHou|qh[2]    ; segH[10]    ; CP          ;
+; N/A                                     ; None                                                ; 16.248 ns  ; Counter12:UHou|qh[3]    ; segH[10]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.234 ns  ; Counter12:UHou|qh[0]    ; BellRadio   ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.234 ns  ; Counter12:UHou|qh[1]    ; HouhShow[1] ; CP          ;
+; N/A                                     ; None                                                ; 16.232 ns  ; Counter6:UMin1|Q[0]     ; segM[14]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 16.212 ns  ; Counter6:UMin1|Q[2]     ; segM[14]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 16.130 ns  ; Counter12:UHou|qh[0]    ; segH[13]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.094 ns  ; Counter12:UHou|qh[1]    ; BellRadio   ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.085 ns  ; Counter12:UHou|qh[1]    ; segH[12]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.074 ns  ; Counter12:UHou|qh[2]    ; segH[12]    ; CP          ;
+; N/A                                     ; None                                                ; 16.037 ns  ; Counter12:UHou|qh[0]    ; segH[10]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.033 ns  ; Counter12:UHou|qh[3]    ; segH[12]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.021 ns  ; Counter12:UHou|ql[2]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 16.014 ns  ; Counter12:UHou|ql[0]    ; segH[1]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 16.011 ns  ; Counter12:UHou|ql[2]    ; segH[1]     ; CP          ;
+; N/A                                     ; None                                                ; 15.879 ns  ; Counter10:UMin0|Q[0]    ; segM[3]     ; CP          ;
+; N/A                                     ; None                                                ; 15.868 ns  ; Counter12:UHou|qh[3]    ; HouhShow[3] ; CP          ;
+; N/A                                     ; None                                                ; 15.839 ns  ; Counter12:UHou|ql[0]    ; HoulShow[0] ; CP          ;
+; N/A                                     ; None                                                ; 15.836 ns  ; Counter12:UHou|qh[0]    ; segH[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.825 ns  ; Counter12:UHou|qh[0]    ; segH[12]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.823 ns  ; Counter12:UHou|qh[0]    ; segH[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.813 ns  ; Counter12:UHou|qh[1]    ; segH[14]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.809 ns  ; Counter12:UHou|qh[1]    ; segH[11]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.807 ns  ; Counter12:UHou|qh[2]    ; segH[14]    ; CP          ;
+; N/A                                     ; None                                                ; 15.802 ns  ; Counter6:UMin1|Q[1]     ; segM[10]    ; CP          ;
+; N/A                                     ; None                                                ; 15.796 ns  ; Counter12:UHou|qh[2]    ; segH[11]    ; CP          ;
+; N/A                                     ; None                                                ; 15.791 ns  ; Counter12:UHou|qh[2]    ; segH[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.780 ns  ; Counter12:UHou|qh[2]    ; segH[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.780 ns  ; Counter6:UMin1|Q[1]     ; segM[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.770 ns  ; Counter12:UHou|qh[3]    ; segH[14]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.738 ns  ; Counter10:UMin0|Q[0]    ; segM[5]     ; CP          ;
+; N/A                                     ; None                                                ; 15.735 ns  ; Counter10:UMin0|Q[0]    ; segM[6]     ; CP          ;
+; N/A                                     ; None                                                ; 15.733 ns  ; Counter6:UMin1|Q[3]     ; segM[10]    ; CP          ;
+; N/A                                     ; None                                                ; 15.732 ns  ; Counter12:UHou|qh[3]    ; segH[11]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.717 ns  ; Counter10:UMin0|Q[0]    ; segM[4]     ; CP          ;
+; N/A                                     ; None                                                ; 15.711 ns  ; Counter6:UMin1|Q[3]     ; segM[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.693 ns  ; Counter10:UMin0|Q[0]    ; segM[2]     ; CP          ;
+; N/A                                     ; None                                                ; 15.659 ns  ; Counter12:UHou|qh[0]    ; HouhShow[0] ; CP          ;
+; N/A                                     ; None                                                ; 15.632 ns  ; Counter6:UMin1|Q[1]     ; segM[11]    ; CP          ;
+; N/A                                     ; None                                                ; 15.587 ns  ; Counter12:UHou|qh[3]    ; segH[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.576 ns  ; Counter12:UHou|ql[3]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 15.576 ns  ; Counter12:UHou|qh[3]    ; segH[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.570 ns  ; Counter6:UMin1|Q[3]     ; segM[11]    ; CP          ;
+; N/A                                     ; None                                                ; 15.558 ns  ; Counter12:UHou|qh[0]    ; segH[14]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.556 ns  ; Counter6:UMin1|Q[2]     ; segM[10]    ; CP          ;
+; N/A                                     ; None                                                ; 15.553 ns  ; Counter12:UHou|ql[2]    ; segH[3]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.547 ns  ; Counter12:UHou|qh[0]    ; segH[11]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.545 ns  ; Counter6:UMin1|Q[0]     ; segM[10]    ; CP          ;
+; N/A                                     ; None                                                ; 15.545 ns  ; Counter6:UMin1|Q[0]     ; segM[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.541 ns  ; Counter6:UMin1|Q[2]     ; segM[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.525 ns  ; Counter12:UHou|ql[2]    ; segH[2]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.513 ns  ; Counter6:UMin1|Q[3]     ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 15.504 ns  ; Counter10:UMin0|Q[0]    ; MinlShow[0] ; CP          ;
+; N/A                                     ; None                                                ; 15.484 ns  ; Counter12:UHou|ql[2]    ; segH[0]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.475 ns  ; Counter12:UHou|ql[1]    ; HoulShow[1] ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.428 ns  ; Counter6:UMin1|Q[1]     ; segM[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.426 ns  ; Counter10:UMin0|Q[0]    ; segM[1]     ; CP          ;
+; N/A                                     ; None                                                ; 15.416 ns  ; Counter12:UHou|qh[1]    ; segH[9]     ; CP          ;
+; N/A                                     ; None                                                ; 15.405 ns  ; Counter12:UHou|qh[1]    ; segH[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.405 ns  ; Counter6:UMin1|Q[0]     ; segM[11]    ; CP          ;
+; N/A                                     ; None                                                ; 15.399 ns  ; Counter6:UMin1|Q[2]     ; segM[11]    ; CP          ;
+; N/A                                     ; None                                                ; 15.382 ns  ; Counter12:UHou|qh[2]    ; segH[13]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.368 ns  ; Counter12:UHou|ql[0]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 15.363 ns  ; Counter12:UHou|ql[2]    ; segH[4]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.355 ns  ; Counter6:UMin1|Q[3]     ; segM[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.343 ns  ; Counter12:UHou|ql[2]    ; segH[5]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.334 ns  ; Counter12:UHou|ql[2]    ; segH[6]     ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.324 ns  ; Counter10:UMin0|Q[0]    ; segM[0]     ; CP          ;
+; N/A                                     ; None                                                ; 15.302 ns  ; Counter10:UMin0|Q[0]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 15.295 ns  ; BellSet:Bs0|MinlBell[1] ; segM[3]     ; SetBellMode ;
+; N/A                                     ; None                                                ; 15.289 ns  ; Counter12:UHou|ql[1]    ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 15.287 ns  ; Counter12:UHou|qh[2]    ; segH[10]    ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.285 ns  ; Counter12:UHou|ql[3]    ; segH[3]     ; CP          ;
+; N/A                                     ; None                                                ; 15.276 ns  ; Counter12:UHou|ql[3]    ; segH[2]     ; CP          ;
+; N/A                                     ; None                                                ; 15.238 ns  ; Counter12:UHou|qh[1]    ; HouhShow[1] ; Adj_H       ;
+; N/A                                     ; None                                                ; 15.215 ns  ; Counter12:UHou|ql[3]    ; segH[0]     ; CP          ;
+; N/A                                     ; None                                                ; 15.211 ns  ; Counter6:UMin1|Q[1]     ; segM[12]    ; CP          ;
+; N/A                                     ; None                                                ; 15.203 ns  ; Counter12:UHou|qh[2]    ; HouhShow[2] ; CP          ;
+; N/A                                     ; None                                                ; 15.194 ns  ; Counter6:UMin1|Q[0]     ; segM[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.184 ns  ; Counter6:UMin1|Q[2]     ; segM[8]     ; CP          ;
+; N/A                                     ; None                                                ; 15.175 ns  ; Counter10:UMin0|Q[0]    ; segM[3]     ; Adj_M       ;
+; N/A                                     ; None                                                ; 15.154 ns  ; BellSet:Bs0|MinlBell[1] ; segM[5]     ; SetBellMode ;
+; N/A                                     ; None                                                ; 15.153 ns  ; BellSet:Bs0|MinlBell[1] ; segM[6]     ; SetBellMode ;
+; N/A                                     ; None                                                ; 15.139 ns  ; Counter6:UMin1|Q[3]     ; segM[12]    ; CP          ;
+; N/A                                     ; None                                                ; 15.134 ns  ; BellSet:Bs0|MinlBell[1] ; segM[4]     ; SetBellMode ;
+; N/A                                     ; None                                                ; 15.114 ns  ; Counter6:UMin1|Q[1]     ; BellRadio   ; CP          ;
+; N/A                                     ; None                                                ; 15.107 ns  ; BellSet:Bs0|MinlBell[1] ; segM[2]     ; SetBellMode ;
+; N/A                                     ; None                                                ; 15.098 ns  ; Counter6:UMin1|Q[1]     ; segM[10]    ; Adj_M       ;
+; N/A                                     ; None                                                ; 15.079 ns  ; Counter12:UHou|ql[3]    ; segH[4]     ; CP          ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;            ;                         ;             ;             ;
++-----------------------------------------+-----------------------------------------------------+------------+-------------------------+-------------+-------------+
+
+
++-------------------------------------------------------------------------+
+; tpd                                                                     ;
++-------+-------------------+-----------------+-------------+-------------+
+; Slack ; Required P2P Time ; Actual P2P Time ; From        ; To          ;
++-------+-------------------+-----------------+-------------+-------------+
+; N/A   ; None              ; 18.295 ns       ; SetBellMode ; segM[13]    ;
+; N/A   ; None              ; 17.852 ns       ; SetBellMode ; segM[3]     ;
+; N/A   ; None              ; 17.711 ns       ; SetBellMode ; segM[5]     ;
+; N/A   ; None              ; 17.710 ns       ; SetBellMode ; segM[6]     ;
+; N/A   ; None              ; 17.691 ns       ; SetBellMode ; segM[4]     ;
+; N/A   ; None              ; 17.664 ns       ; SetBellMode ; segM[2]     ;
+; N/A   ; None              ; 17.400 ns       ; SetBellMode ; segM[1]     ;
+; N/A   ; None              ; 17.102 ns       ; SetBellMode ; segH[3]     ;
+; N/A   ; None              ; 17.093 ns       ; SetBellMode ; segH[2]     ;
+; N/A   ; None              ; 17.032 ns       ; SetBellMode ; segH[0]     ;
+; N/A   ; None              ; 16.903 ns       ; SetBellMode ; segH[4]     ;
+; N/A   ; None              ; 16.888 ns       ; SetBellMode ; segH[5]     ;
+; N/A   ; None              ; 16.869 ns       ; SetBellMode ; segH[6]     ;
+; N/A   ; None              ; 16.814 ns       ; SetBellMode ; segM[14]    ;
+; N/A   ; None              ; 16.556 ns       ; SetBellMode ; segH[1]     ;
+; N/A   ; None              ; 16.278 ns       ; SetBellMode ; MinlShow[3] ;
+; N/A   ; None              ; 16.121 ns       ; SetBellMode ; segH[13]    ;
+; N/A   ; None              ; 16.031 ns       ; SetBellMode ; segH[10]    ;
+; N/A   ; None              ; 15.821 ns       ; SetBellMode ; segH[12]    ;
+; N/A   ; None              ; 15.549 ns       ; SetBellMode ; segH[14]    ;
+; N/A   ; None              ; 15.545 ns       ; SetBellMode ; segH[11]    ;
+; N/A   ; None              ; 15.430 ns       ; SetBellMode ; segM[10]    ;
+; N/A   ; None              ; 15.423 ns       ; SetBellMode ; segM[9]     ;
+; N/A   ; None              ; 15.283 ns       ; SetBellMode ; segM[11]    ;
+; N/A   ; None              ; 15.072 ns       ; SetBellMode ; segM[8]     ;
+; N/A   ; None              ; 14.974 ns       ; SetBellMode ; HouhShow[1] ;
+; N/A   ; None              ; 14.855 ns       ; SetBellMode ; segM[12]    ;
+; N/A   ; None              ; 14.843 ns       ; SetBellMode ; HoulShow[1] ;
+; N/A   ; None              ; 14.379 ns       ; SetBellMode ; MinlShow[0] ;
+; N/A   ; None              ; 14.286 ns       ; SetBellMode ; HouhShow[3] ;
+; N/A   ; None              ; 14.199 ns       ; SetBellMode ; segM[0]     ;
+; N/A   ; None              ; 14.183 ns       ; SetBellMode ; segH[9]     ;
+; N/A   ; None              ; 14.172 ns       ; SetBellMode ; segH[8]     ;
+; N/A   ; None              ; 14.026 ns       ; SetBellMode ; BellRadio   ;
+; N/A   ; None              ; 13.970 ns       ; SetBellMode ; HouhShow[0] ;
+; N/A   ; None              ; 13.939 ns       ; SetBellMode ; HoulShow[0] ;
+; N/A   ; None              ; 13.856 ns       ; BellEn      ; BellRadio   ;
+; N/A   ; None              ; 13.595 ns       ; SetBellMode ; HouhShow[2] ;
+; N/A   ; None              ; 13.503 ns       ; EN          ; BellRadio   ;
+; N/A   ; None              ; 12.344 ns       ; SetBellMode ; HoulShow[3] ;
+; N/A   ; None              ; 12.333 ns       ; SetBellMode ; HoulShow[2] ;
+; N/A   ; None              ; 12.051 ns       ; SetBellMode ; MinhShow[2] ;
+; N/A   ; None              ; 11.478 ns       ; SetBellMode ; MinhShow[1] ;
+; N/A   ; None              ; 11.459 ns       ; SetBellMode ; MinhShow[0] ;
+; N/A   ; None              ; 11.072 ns       ; SetBellMode ; MinlShow[1] ;
+; N/A   ; None              ; 10.981 ns       ; Adj_M       ; HourRadio   ;
+; N/A   ; None              ; 10.916 ns       ; SetBellMode ; MinlShow[2] ;
+; N/A   ; None              ; 10.745 ns       ; SetBellMode ; MinhShow[3] ;
+; N/A   ; None              ; 10.427 ns       ; CP          ; BellRadio   ;
+; N/A   ; None              ; 7.035 ns        ; CP          ; HourRadio   ;
++-------+-------------------+-----------------+-------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; th                                                                                                       ;
++---------------+-------------+-----------+------------------+----------------------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From             ; To                               ; To Clock ;
++---------------+-------------+-----------+------------------+----------------------------------+----------+
+; N/A           ; None        ; -0.313 ns ; Adj_H            ; Counter12:UHou|qh[0]             ; CP       ;
+; N/A           ; None        ; -0.313 ns ; Adj_H            ; Counter12:UHou|qh[1]             ; CP       ;
+; N/A           ; None        ; -0.313 ns ; Adj_H            ; Counter12:UHou|qh[3]             ; CP       ;
+; N/A           ; None        ; -0.313 ns ; Adj_H            ; Counter12:UHou|qh[2]             ; CP       ;
+; N/A           ; None        ; -0.472 ns ; Adj_H            ; Counter12:UHou|ql[0]             ; CP       ;
+; N/A           ; None        ; -0.472 ns ; Adj_H            ; Counter12:UHou|ql[1]             ; CP       ;
+; N/A           ; None        ; -0.472 ns ; Adj_H            ; Counter12:UHou|ql[3]             ; CP       ;
+; N/A           ; None        ; -0.472 ns ; Adj_H            ; Counter12:UHou|ql[2]             ; CP       ;
+; N/A           ; None        ; -0.646 ns ; Adj_M            ; Counter6:UMin1|Q[3]              ; CP       ;
+; N/A           ; None        ; -0.788 ns ; Adj_M            ; Counter10:UMin0|Q[0]             ; CP       ;
+; N/A           ; None        ; -0.788 ns ; Adj_M            ; Counter10:UMin0|Q[1]             ; CP       ;
+; N/A           ; None        ; -0.788 ns ; Adj_M            ; Counter10:UMin0|Q[3]             ; CP       ;
+; N/A           ; None        ; -0.829 ns ; Adj_M            ; Counter10:UMin0|Q[2]             ; CP       ;
+; N/A           ; None        ; -1.167 ns ; Adj_M            ; Counter6:UMin1|Q[2]              ; CP       ;
+; N/A           ; None        ; -1.167 ns ; Adj_M            ; Counter6:UMin1|Q[1]              ; CP       ;
+; N/A           ; None        ; -1.167 ns ; Adj_M            ; Counter6:UMin1|Q[0]              ; CP       ;
+; N/A           ; None        ; -1.223 ns ; Adj_M            ; Counter12:UHou|qh[0]             ; CP       ;
+; N/A           ; None        ; -1.223 ns ; Adj_M            ; Counter12:UHou|qh[1]             ; CP       ;
+; N/A           ; None        ; -1.223 ns ; Adj_M            ; Counter12:UHou|qh[3]             ; CP       ;
+; N/A           ; None        ; -1.223 ns ; Adj_M            ; Counter12:UHou|qh[2]             ; CP       ;
+; N/A           ; None        ; -1.309 ns ; Adj_H            ; Counter12:UHou|qh[0]             ; Adj_H    ;
+; N/A           ; None        ; -1.309 ns ; Adj_H            ; Counter12:UHou|qh[1]             ; Adj_H    ;
+; N/A           ; None        ; -1.309 ns ; Adj_H            ; Counter12:UHou|qh[3]             ; Adj_H    ;
+; N/A           ; None        ; -1.309 ns ; Adj_H            ; Counter12:UHou|qh[2]             ; Adj_H    ;
+; N/A           ; None        ; -1.350 ns ; Adj_M            ; Counter6:UMin1|Q[3]              ; Adj_M    ;
+; N/A           ; None        ; -1.403 ns ; Adj_M            ; Counter12:UHou|ql[0]             ; CP       ;
+; N/A           ; None        ; -1.403 ns ; Adj_M            ; Counter12:UHou|ql[1]             ; CP       ;
+; N/A           ; None        ; -1.403 ns ; Adj_M            ; Counter12:UHou|ql[3]             ; CP       ;
+; N/A           ; None        ; -1.403 ns ; Adj_M            ; Counter12:UHou|ql[2]             ; CP       ;
+; N/A           ; None        ; -1.468 ns ; Adj_H            ; Counter12:UHou|ql[0]             ; Adj_H    ;
+; N/A           ; None        ; -1.468 ns ; Adj_H            ; Counter12:UHou|ql[1]             ; Adj_H    ;
+; N/A           ; None        ; -1.468 ns ; Adj_H            ; Counter12:UHou|ql[3]             ; Adj_H    ;
+; N/A           ; None        ; -1.468 ns ; Adj_H            ; Counter12:UHou|ql[2]             ; Adj_H    ;
+; N/A           ; None        ; -1.492 ns ; Adj_M            ; Counter10:UMin0|Q[0]             ; Adj_M    ;
+; N/A           ; None        ; -1.492 ns ; Adj_M            ; Counter10:UMin0|Q[1]             ; Adj_M    ;
+; N/A           ; None        ; -1.492 ns ; Adj_M            ; Counter10:UMin0|Q[3]             ; Adj_M    ;
+; N/A           ; None        ; -1.533 ns ; Adj_M            ; Counter10:UMin0|Q[2]             ; Adj_M    ;
+; N/A           ; None        ; -1.871 ns ; Adj_M            ; Counter6:UMin1|Q[2]              ; Adj_M    ;
+; N/A           ; None        ; -1.871 ns ; Adj_M            ; Counter6:UMin1|Q[1]              ; Adj_M    ;
+; N/A           ; None        ; -1.871 ns ; Adj_M            ; Counter6:UMin1|Q[0]              ; Adj_M    ;
+; N/A           ; None        ; -2.219 ns ; Adj_M            ; Counter12:UHou|qh[0]             ; Adj_H    ;
+; N/A           ; None        ; -2.219 ns ; Adj_M            ; Counter12:UHou|qh[1]             ; Adj_H    ;
+; N/A           ; None        ; -2.219 ns ; Adj_M            ; Counter12:UHou|qh[3]             ; Adj_H    ;
+; N/A           ; None        ; -2.219 ns ; Adj_M            ; Counter12:UHou|qh[2]             ; Adj_H    ;
+; N/A           ; None        ; -2.399 ns ; Adj_M            ; Counter12:UHou|ql[0]             ; Adj_H    ;
+; N/A           ; None        ; -2.399 ns ; Adj_M            ; Counter12:UHou|ql[1]             ; Adj_H    ;
+; N/A           ; None        ; -2.399 ns ; Adj_M            ; Counter12:UHou|ql[3]             ; Adj_H    ;
+; N/A           ; None        ; -2.399 ns ; Adj_M            ; Counter12:UHou|ql[2]             ; Adj_H    ;
+; N/A           ; None        ; -4.938 ns ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[2] ; CP       ;
+; N/A           ; None        ; -4.938 ns ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; CP       ;
+; N/A           ; None        ; -5.022 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[2] ; CP       ;
+; N/A           ; None        ; -5.022 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; CP       ;
+; N/A           ; None        ; -5.158 ns ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[2] ; CP       ;
+; N/A           ; None        ; -5.158 ns ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[3]  ; CP       ;
+; N/A           ; None        ; -5.180 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP       ;
+; N/A           ; None        ; -5.180 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP       ;
+; N/A           ; None        ; -5.180 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP       ;
+; N/A           ; None        ; -5.335 ns ; EN               ; Counter10:USec0|Q[2]             ; CP       ;
+; N/A           ; None        ; -5.359 ns ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP       ;
+; N/A           ; None        ; -5.359 ns ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP       ;
+; N/A           ; None        ; -5.359 ns ; EN               ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP       ;
+; N/A           ; None        ; -5.401 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A           ; None        ; -5.401 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A           ; None        ; -5.401 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A           ; None        ; -5.401 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A           ; None        ; -5.438 ns ; EN               ; Counter10:USec0|Q[1]             ; CP       ;
+; N/A           ; None        ; -5.438 ns ; EN               ; Counter10:USec0|Q[0]             ; CP       ;
+; N/A           ; None        ; -5.438 ns ; EN               ; Counter10:USec0|Q[3]             ; CP       ;
+; N/A           ; None        ; -5.499 ns ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[0] ; CP       ;
+; N/A           ; None        ; -5.499 ns ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[3] ; CP       ;
+; N/A           ; None        ; -5.499 ns ; EN               ; BellSet:Bs0|Counter10:BMin0|Q[1] ; CP       ;
+; N/A           ; None        ; -5.580 ns ; EN               ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A           ; None        ; -5.580 ns ; EN               ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A           ; None        ; -5.580 ns ; EN               ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A           ; None        ; -5.580 ns ; EN               ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A           ; None        ; -5.583 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[0] ; CP       ;
+; N/A           ; None        ; -5.583 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[3] ; CP       ;
+; N/A           ; None        ; -5.583 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter10:BMin0|Q[1] ; CP       ;
+; N/A           ; None        ; -5.695 ns ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[0]  ; CP       ;
+; N/A           ; None        ; -5.695 ns ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[1]  ; CP       ;
+; N/A           ; None        ; -5.695 ns ; SetBellMode      ; BellSet:Bs0|Counter6:BMin1|Q[2]  ; CP       ;
+; N/A           ; None        ; -5.699 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A           ; None        ; -5.699 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A           ; None        ; -5.699 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A           ; None        ; -5.699 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
+; N/A           ; None        ; -5.719 ns ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[0] ; CP       ;
+; N/A           ; None        ; -5.719 ns ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[3] ; CP       ;
+; N/A           ; None        ; -5.719 ns ; SetBellMode      ; BellSet:Bs0|Counter10:BMin0|Q[1] ; CP       ;
+; N/A           ; None        ; -5.776 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A           ; None        ; -5.776 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A           ; None        ; -5.776 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A           ; None        ; -5.776 ns ; SetHourBellKey   ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A           ; None        ; -5.906 ns ; EN               ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A           ; None        ; -5.906 ns ; EN               ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A           ; None        ; -5.906 ns ; EN               ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A           ; None        ; -5.906 ns ; EN               ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
+; N/A           ; None        ; -5.916 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[0] ; CP       ;
+; N/A           ; None        ; -5.916 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[2] ; CP       ;
+; N/A           ; None        ; -5.916 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[3] ; CP       ;
+; N/A           ; None        ; -5.916 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|qh[1] ; CP       ;
+; N/A           ; None        ; -6.100 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A           ; None        ; -6.100 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A           ; None        ; -6.100 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A           ; None        ; -6.100 ns ; SetBellMode      ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
+; N/A           ; None        ; -6.220 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[2] ; CP       ;
+; N/A           ; None        ; -6.220 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[0] ; CP       ;
+; N/A           ; None        ; -6.220 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[3] ; CP       ;
+; N/A           ; None        ; -6.220 ns ; SetMinuteBellKey ; BellSet:Bs0|Counter12:BHou|ql[1] ; CP       ;
++---------------+-------------+-----------+------------------+----------------------------------+----------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Wed Jan 06 20:59:34 2021
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off Clock -c Clock --timing_analysis_only
+Warning: Timing Analysis is analyzing one or more combinational loops as latches
+    Warning: Node "BellSet:Bs0|MinhBell[0]" is a latch
+    Warning: Node "BellSet:Bs0|MinhBell[1]" is a latch
+    Warning: Node "BellSet:Bs0|MinhBell[2]" is a latch
+    Warning: Node "BellSet:Bs0|MinhBell[3]" is a latch
+    Warning: Node "BellSet:Bs0|MinlBell[0]" is a latch
+    Warning: Node "BellSet:Bs0|MinlBell[1]" is a latch
+    Warning: Node "BellSet:Bs0|MinlBell[2]" is a latch
+    Warning: Node "BellSet:Bs0|MinlBell[3]" is a latch
+    Warning: Node "BellSet:Bs0|HouhBell[0]" is a latch
+    Warning: Node "BellSet:Bs0|HouhBell[1]" is a latch
+    Warning: Node "BellSet:Bs0|HouhBell[2]" is a latch
+    Warning: Node "BellSet:Bs0|HouhBell[3]" is a latch
+    Warning: Node "BellSet:Bs0|HoulBell[0]" is a latch
+    Warning: Node "BellSet:Bs0|HoulBell[1]" is a latch
+    Warning: Node "BellSet:Bs0|HoulBell[2]" is a latch
+    Warning: Node "BellSet:Bs0|HoulBell[3]" is a latch
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Adj_H" is an undefined clock
+    Info: Assuming node "CP" is an undefined clock
+    Info: Assuming node "Adj_M" is an undefined clock
+    Info: Assuming node "SetBellMode" is a latch enable. Will not compute fmax for this pin.
+Warning: Found 2 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected gated clock "clk_m" as buffer
+    Info: Detected gated clock "clk_h" as buffer
+Info: Clock "Adj_H" has Internal fmax of 337.27 MHz between source register "Counter12:UHou|qh[1]" and destination register "Counter12:UHou|qh[0]" (period= 2.965 ns)
+    Info: + Longest register to register delay is 2.751 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X87_Y20_N13; Fanout = 8; REG Node = 'Counter12:UHou|qh[1]'
+        Info: 2: + IC(0.349 ns) + CELL(0.398 ns) = 0.747 ns; Loc. = LCCOMB_X87_Y20_N6; Fanout = 2; COMB Node = 'Counter12:UHou|Equal0~0'
+        Info: 3: + IC(0.281 ns) + CELL(0.438 ns) = 1.466 ns; Loc. = LCCOMB_X87_Y20_N2; Fanout = 1; COMB Node = 'Counter12:UHou|qh[0]~6'
+        Info: 4: + IC(0.251 ns) + CELL(0.150 ns) = 1.867 ns; Loc. = LCCOMB_X87_Y20_N4; Fanout = 4; COMB Node = 'Counter12:UHou|qh[0]~7'
+        Info: 5: + IC(0.224 ns) + CELL(0.660 ns) = 2.751 ns; Loc. = LCFF_X87_Y20_N11; Fanout = 9; REG Node = 'Counter12:UHou|qh[0]'
+        Info: Total cell delay = 1.646 ns ( 59.83 % )
+        Info: Total interconnect delay = 1.105 ns ( 40.17 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "Adj_H" to destination register is 5.749 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_U30; Fanout = 3; CLK Node = 'Adj_H'
+            Info: 2: + IC(1.347 ns) + CELL(0.150 ns) = 2.349 ns; Loc. = LCCOMB_X88_Y20_N24; Fanout = 1; COMB Node = 'clk_h'
+            Info: 3: + IC(1.615 ns) + CELL(0.000 ns) = 3.964 ns; Loc. = CLKCTRL_G5; Fanout = 8; COMB Node = 'clk_h~clkctrl'
+            Info: 4: + IC(1.248 ns) + CELL(0.537 ns) = 5.749 ns; Loc. = LCFF_X87_Y20_N11; Fanout = 9; REG Node = 'Counter12:UHou|qh[0]'
+            Info: Total cell delay = 1.539 ns ( 26.77 % )
+            Info: Total interconnect delay = 4.210 ns ( 73.23 % )
+        Info: - Longest clock path from clock "Adj_H" to source register is 5.749 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_U30; Fanout = 3; CLK Node = 'Adj_H'
+            Info: 2: + IC(1.347 ns) + CELL(0.150 ns) = 2.349 ns; Loc. = LCCOMB_X88_Y20_N24; Fanout = 1; COMB Node = 'clk_h'
+            Info: 3: + IC(1.615 ns) + CELL(0.000 ns) = 3.964 ns; Loc. = CLKCTRL_G5; Fanout = 8; COMB Node = 'clk_h~clkctrl'
+            Info: 4: + IC(1.248 ns) + CELL(0.537 ns) = 5.749 ns; Loc. = LCFF_X87_Y20_N13; Fanout = 8; REG Node = 'Counter12:UHou|qh[1]'
+            Info: Total cell delay = 1.539 ns ( 26.77 % )
+            Info: Total interconnect delay = 4.210 ns ( 73.23 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: Clock "CP" has Internal fmax of 287.19 MHz between source register "BellSet:Bs0|Counter12:BHou|ql[0]" and destination register "BellSet:Bs0|Counter12:BHou|qh[3]" (period= 3.482 ns)
+    Info: + Longest register to register delay is 3.268 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X87_Y33_N25; Fanout = 8; REG Node = 'BellSet:Bs0|Counter12:BHou|ql[0]'
+        Info: 2: + IC(1.013 ns) + CELL(0.420 ns) = 1.433 ns; Loc. = LCCOMB_X88_Y32_N0; Fanout = 5; COMB Node = 'BellSet:Bs0|Counter12:BHou|Equal1~0'
+        Info: 3: + IC(0.697 ns) + CELL(0.414 ns) = 2.544 ns; Loc. = LCCOMB_X87_Y33_N10; Fanout = 2; COMB Node = 'BellSet:Bs0|Counter12:BHou|qh[0]~5'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 2.615 ns; Loc. = LCCOMB_X87_Y33_N12; Fanout = 2; COMB Node = 'BellSet:Bs0|Counter12:BHou|qh[1]~9'
+        Info: 5: + IC(0.000 ns) + CELL(0.159 ns) = 2.774 ns; Loc. = LCCOMB_X87_Y33_N14; Fanout = 1; COMB Node = 'BellSet:Bs0|Counter12:BHou|qh[2]~11'
+        Info: 6: + IC(0.000 ns) + CELL(0.410 ns) = 3.184 ns; Loc. = LCCOMB_X87_Y33_N16; Fanout = 1; COMB Node = 'BellSet:Bs0|Counter12:BHou|qh[3]~12'
+        Info: 7: + IC(0.000 ns) + CELL(0.084 ns) = 3.268 ns; Loc. = LCFF_X87_Y33_N17; Fanout = 3; REG Node = 'BellSet:Bs0|Counter12:BHou|qh[3]'
+        Info: Total cell delay = 1.558 ns ( 47.67 % )
+        Info: Total interconnect delay = 1.710 ns ( 52.33 % )
+    Info: - Smallest clock skew is 0.000 ns
+        Info: + Shortest clock path from clock "CP" to destination register is 2.821 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 5; CLK Node = 'CP'
+            Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 24; COMB Node = 'CP~clkctrl'
+            Info: 3: + IC(1.213 ns) + CELL(0.537 ns) = 2.821 ns; Loc. = LCFF_X87_Y33_N17; Fanout = 3; REG Node = 'BellSet:Bs0|Counter12:BHou|qh[3]'
+            Info: Total cell delay = 1.496 ns ( 53.03 % )
+            Info: Total interconnect delay = 1.325 ns ( 46.97 % )
+        Info: - Longest clock path from clock "CP" to source register is 2.821 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 5; CLK Node = 'CP'
+            Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 24; COMB Node = 'CP~clkctrl'
+            Info: 3: + IC(1.213 ns) + CELL(0.537 ns) = 2.821 ns; Loc. = LCFF_X87_Y33_N25; Fanout = 8; REG Node = 'BellSet:Bs0|Counter12:BHou|ql[0]'
+            Info: Total cell delay = 1.496 ns ( 53.03 % )
+            Info: Total interconnect delay = 1.325 ns ( 46.97 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: Clock "Adj_M" has Internal fmax of 354.36 MHz between source register "Counter10:UMin0|Q[2]" and destination register "Counter6:UMin1|Q[2]" (period= 2.822 ns)
+    Info: + Longest register to register delay is 2.609 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X87_Y20_N19; Fanout = 9; REG Node = 'Counter10:UMin0|Q[2]'
+        Info: 2: + IC(0.509 ns) + CELL(0.398 ns) = 0.907 ns; Loc. = LCCOMB_X87_Y20_N28; Fanout = 1; COMB Node = 'Counter10:UMin0|Equal0~0'
+        Info: 3: + IC(0.247 ns) + CELL(0.150 ns) = 1.304 ns; Loc. = LCCOMB_X87_Y20_N22; Fanout = 7; COMB Node = 'EN_M_H'
+        Info: 4: + IC(0.645 ns) + CELL(0.660 ns) = 2.609 ns; Loc. = LCFF_X89_Y20_N5; Fanout = 9; REG Node = 'Counter6:UMin1|Q[2]'
+        Info: Total cell delay = 1.208 ns ( 46.30 % )
+        Info: Total interconnect delay = 1.401 ns ( 53.70 % )
+    Info: - Smallest clock skew is 0.001 ns
+        Info: + Shortest clock path from clock "Adj_M" to destination register is 5.844 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T29; Fanout = 3; CLK Node = 'Adj_M'
+            Info: 2: + IC(1.382 ns) + CELL(0.271 ns) = 2.495 ns; Loc. = LCCOMB_X88_Y20_N18; Fanout = 1; COMB Node = 'clk_m'
+            Info: 3: + IC(1.564 ns) + CELL(0.000 ns) = 4.059 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'clk_m~clkctrl'
+            Info: 4: + IC(1.248 ns) + CELL(0.537 ns) = 5.844 ns; Loc. = LCFF_X89_Y20_N5; Fanout = 9; REG Node = 'Counter6:UMin1|Q[2]'
+            Info: Total cell delay = 1.650 ns ( 28.23 % )
+            Info: Total interconnect delay = 4.194 ns ( 71.77 % )
+        Info: - Longest clock path from clock "Adj_M" to source register is 5.843 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.842 ns) = 0.842 ns; Loc. = PIN_T29; Fanout = 3; CLK Node = 'Adj_M'
+            Info: 2: + IC(1.382 ns) + CELL(0.271 ns) = 2.495 ns; Loc. = LCCOMB_X88_Y20_N18; Fanout = 1; COMB Node = 'clk_m'
+            Info: 3: + IC(1.564 ns) + CELL(0.000 ns) = 4.059 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'clk_m~clkctrl'
+            Info: 4: + IC(1.247 ns) + CELL(0.537 ns) = 5.843 ns; Loc. = LCFF_X87_Y20_N19; Fanout = 9; REG Node = 'Counter10:UMin0|Q[2]'
+            Info: Total cell delay = 1.650 ns ( 28.24 % )
+            Info: Total interconnect delay = 4.193 ns ( 71.76 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tsu for register "BellSet:Bs0|Counter12:BHou|ql[2]" (data pin = "SetBellMode", clock pin = "CP") is 6.586 ns
+    Info: + Longest pin to register delay is 9.443 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_AC27; Fanout = 36; CLK Node = 'SetBellMode'
+        Info: 2: + IC(6.190 ns) + CELL(0.437 ns) = 7.479 ns; Loc. = LCCOMB_X88_Y33_N22; Fanout = 6; COMB Node = 'BellSet:Bs0|mlEN~0'
+        Info: 3: + IC(0.479 ns) + CELL(0.437 ns) = 8.395 ns; Loc. = LCCOMB_X88_Y33_N30; Fanout = 4; COMB Node = 'BellSet:Bs0|hEN~1'
+        Info: 4: + IC(0.388 ns) + CELL(0.660 ns) = 9.443 ns; Loc. = LCFF_X87_Y33_N29; Fanout = 7; REG Node = 'BellSet:Bs0|Counter12:BHou|ql[2]'
+        Info: Total cell delay = 2.386 ns ( 25.27 % )
+        Info: Total interconnect delay = 7.057 ns ( 74.73 % )
+    Info: + Micro setup delay of destination is -0.036 ns
+    Info: - Shortest clock path from clock "CP" to destination register is 2.821 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 5; CLK Node = 'CP'
+        Info: 2: + IC(0.112 ns) + CELL(0.000 ns) = 1.071 ns; Loc. = CLKCTRL_G14; Fanout = 24; COMB Node = 'CP~clkctrl'
+        Info: 3: + IC(1.213 ns) + CELL(0.537 ns) = 2.821 ns; Loc. = LCFF_X87_Y33_N29; Fanout = 7; REG Node = 'BellSet:Bs0|Counter12:BHou|ql[2]'
+        Info: Total cell delay = 1.496 ns ( 53.03 % )
+        Info: Total interconnect delay = 1.325 ns ( 46.97 % )
+Info: tco from clock "CP" to destination pin "segM[3]" through register "Counter10:UMin0|Q[2]" is 18.877 ns
+    Info: + Longest clock path from clock "CP" to source register is 6.547 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 5; CLK Node = 'CP'
+        Info: 2: + IC(2.090 ns) + CELL(0.150 ns) = 3.199 ns; Loc. = LCCOMB_X88_Y20_N18; Fanout = 1; COMB Node = 'clk_m'
+        Info: 3: + IC(1.564 ns) + CELL(0.000 ns) = 4.763 ns; Loc. = CLKCTRL_G6; Fanout = 8; COMB Node = 'clk_m~clkctrl'
+        Info: 4: + IC(1.247 ns) + CELL(0.537 ns) = 6.547 ns; Loc. = LCFF_X87_Y20_N19; Fanout = 9; REG Node = 'Counter10:UMin0|Q[2]'
+        Info: Total cell delay = 1.646 ns ( 25.14 % )
+        Info: Total interconnect delay = 4.901 ns ( 74.86 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 12.080 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X87_Y20_N19; Fanout = 9; REG Node = 'Counter10:UMin0|Q[2]'
+        Info: 2: + IC(1.644 ns) + CELL(0.420 ns) = 2.064 ns; Loc. = LCCOMB_X89_Y27_N12; Fanout = 8; COMB Node = 'MinlShow~2'
+        Info: 3: + IC(6.020 ns) + CELL(0.438 ns) = 8.522 ns; Loc. = LCCOMB_X1_Y30_N12; Fanout = 1; COMB Node = '_BCDto7LED:Smin|WideOr10~0'
+        Info: 4: + IC(0.926 ns) + CELL(2.632 ns) = 12.080 ns; Loc. = PIN_N2; Fanout = 0; PIN Node = 'segM[3]'
+        Info: Total cell delay = 3.490 ns ( 28.89 % )
+        Info: Total interconnect delay = 8.590 ns ( 71.11 % )
+Info: Longest tpd from source pin "SetBellMode" to destination pin "segM[13]" is 18.295 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_AC27; Fanout = 36; CLK Node = 'SetBellMode'
+    Info: 2: + IC(6.128 ns) + CELL(0.420 ns) = 7.400 ns; Loc. = LCCOMB_X89_Y20_N6; Fanout = 8; COMB Node = 'MinhShow~0'
+    Info: 3: + IC(1.134 ns) + CELL(0.438 ns) = 8.972 ns; Loc. = LCCOMB_X89_Y27_N20; Fanout = 1; COMB Node = '_BCDto7LED:Smin|WideOr1~0'
+    Info: 4: + IC(6.691 ns) + CELL(2.632 ns) = 18.295 ns; Loc. = PIN_K4; Fanout = 0; PIN Node = 'segM[13]'
+    Info: Total cell delay = 4.342 ns ( 23.73 % )
+    Info: Total interconnect delay = 13.953 ns ( 76.27 % )
+Info: th for register "Counter12:UHou|qh[0]" (data pin = "Adj_H", clock pin = "CP") is -0.313 ns
+    Info: + Longest clock path from clock "CP" to destination register is 6.745 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.959 ns) = 0.959 ns; Loc. = PIN_AD15; Fanout = 5; CLK Node = 'CP'
+        Info: 2: + IC(2.115 ns) + CELL(0.271 ns) = 3.345 ns; Loc. = LCCOMB_X88_Y20_N24; Fanout = 1; COMB Node = 'clk_h'
+        Info: 3: + IC(1.615 ns) + CELL(0.000 ns) = 4.960 ns; Loc. = CLKCTRL_G5; Fanout = 8; COMB Node = 'clk_h~clkctrl'
+        Info: 4: + IC(1.248 ns) + CELL(0.537 ns) = 6.745 ns; Loc. = LCFF_X87_Y20_N11; Fanout = 9; REG Node = 'Counter12:UHou|qh[0]'
+        Info: Total cell delay = 1.767 ns ( 26.20 % )
+        Info: Total interconnect delay = 4.978 ns ( 73.80 % )
+    Info: + Micro hold delay of destination is 0.266 ns
+    Info: - Shortest pin to register delay is 7.324 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.852 ns) = 0.852 ns; Loc. = PIN_U30; Fanout = 3; CLK Node = 'Adj_H'
+        Info: 2: + IC(5.178 ns) + CELL(0.410 ns) = 6.440 ns; Loc. = LCCOMB_X87_Y20_N4; Fanout = 4; COMB Node = 'Counter12:UHou|qh[0]~7'
+        Info: 3: + IC(0.224 ns) + CELL(0.660 ns) = 7.324 ns; Loc. = LCFF_X87_Y20_N11; Fanout = 9; REG Node = 'Counter12:UHou|qh[0]'
+        Info: Total cell delay = 1.922 ns ( 26.24 % )
+        Info: Total interconnect delay = 5.402 ns ( 73.76 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 19 warnings
+    Info: Peak virtual memory: 187 megabytes
+    Info: Processing ended: Wed Jan 06 20:59:34 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+

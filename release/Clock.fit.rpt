@@ -1,5 +1,5 @@
 Fitter report for Clock
-Wed Jan 06 14:51:20 2021
+Wed Jan 06 20:59:30 2021
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -61,17 +61,17 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                    ;
 +------------------------------------+----------------------------------------------+
-; Fitter Status                      ; Successful - Wed Jan 06 14:51:20 2021        ;
+; Fitter Status                      ; Successful - Wed Jan 06 20:59:30 2021        ;
 ; Quartus II Version                 ; 9.1 Build 350 03/24/2010 SP 2 SJ Web Edition ;
 ; Revision Name                      ; Clock                                        ;
 ; Top-level Entity Name              ; Clock                                        ;
 ; Family                             ; Cyclone II                                   ;
 ; Device                             ; EP2C70F896C6                                 ;
 ; Timing Models                      ; Final                                        ;
-; Total logic elements               ; 163 / 68,416 ( < 1 % )                       ;
-;     Total combinational functions  ; 163 / 68,416 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 56 / 68,416 ( < 1 % )                        ;
-; Total registers                    ; 56                                           ;
+; Total logic elements               ; 179 / 68,416 ( < 1 % )                       ;
+;     Total combinational functions  ; 179 / 68,416 ( < 1 % )                       ;
+;     Dedicated logic registers      ; 40 / 68,416 ( < 1 % )                        ;
+; Total registers                    ; 40                                           ;
 ; Total pins                         ; 115 / 622 ( 18 % )                           ;
 ; Total virtual pins                 ; 0                                            ;
 ; Total memory bits                  ; 0 / 1,152,000 ( 0 % )                        ;
@@ -181,7 +181,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------+
 ; Pin-Out File ;
 +--------------+
-The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.pin.
+The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/release/Clock.pin.
 
 
 +----------------------------------------------------------------------+
@@ -189,26 +189,26 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 +---------------------------------------------+------------------------+
 ; Resource                                    ; Usage                  ;
 +---------------------------------------------+------------------------+
-; Total logic elements                        ; 163 / 68,416 ( < 1 % ) ;
-;     -- Combinational with no register       ; 107                    ;
+; Total logic elements                        ; 179 / 68,416 ( < 1 % ) ;
+;     -- Combinational with no register       ; 139                    ;
 ;     -- Register only                        ; 0                      ;
-;     -- Combinational with a register        ; 56                     ;
+;     -- Combinational with a register        ; 40                     ;
 ;                                             ;                        ;
 ; Logic element usage by number of LUT inputs ;                        ;
 ;     -- 4 input functions                    ; 92                     ;
-;     -- 3 input functions                    ; 51                     ;
+;     -- 3 input functions                    ; 67                     ;
 ;     -- <=2 input functions                  ; 20                     ;
 ;     -- Register only                        ; 0                      ;
 ;                                             ;                        ;
 ; Logic elements by mode                      ;                        ;
-;     -- normal mode                          ; 145                    ;
+;     -- normal mode                          ; 161                    ;
 ;     -- arithmetic mode                      ; 18                     ;
 ;                                             ;                        ;
-; Total registers*                            ; 56 / 70,234 ( < 1 % )  ;
-;     -- Dedicated logic registers            ; 56 / 68,416 ( < 1 % )  ;
+; Total registers*                            ; 40 / 70,234 ( < 1 % )  ;
+;     -- Dedicated logic registers            ; 40 / 68,416 ( < 1 % )  ;
 ;     -- I/O registers                        ; 0 / 1,818 ( 0 % )      ;
 ;                                             ;                        ;
-; Total LABs:  partially or completely used   ; 13 / 4,276 ( < 1 % )   ;
+; Total LABs:  partially or completely used   ; 15 / 4,276 ( < 1 % )   ;
 ; User inserted logic elements                ; 0                      ;
 ; Virtual pins                                ; 0                      ;
 ; I/O pins                                    ; 115 / 622 ( 18 % )     ;
@@ -224,7 +224,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )          ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )          ;
 ; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%           ;
-; Peak interconnect usage (total/H/V)         ; 2% / 2% / 2%           ;
+; Peak interconnect usage (total/H/V)         ; 2% / 1% / 3%           ;
 ; Maximum fan-out node                        ; nCR                    ;
 ; Maximum fan-out                             ; 40                     ;
 ; Highest non-global fan-out signal           ; nCR                    ;
@@ -243,12 +243,12 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 +------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 ; Adj_H            ; U30   ; 6        ; 95           ; 23           ; 1           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; Adj_M            ; T29   ; 6        ; 95           ; 24           ; 0           ; 3                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; BellEn           ; C16   ; 4        ; 49           ; 51           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; BellEn           ; AB25  ; 6        ; 95           ; 8            ; 0           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; CP               ; AD15  ; 7        ; 49           ; 0            ; 1           ; 5                     ; 0                  ; yes    ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; EN               ; AA23  ; 6        ; 95           ; 8            ; 1           ; 8                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
-; SetBellMode      ; AC15  ; 7        ; 49           ; 0            ; 0           ; 36                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; SetHourBellKey   ; G16   ; 4        ; 51           ; 51           ; 1           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
-; SetMinuteBellKey ; AG16  ; 7        ; 53           ; 0            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; Fitter               ;
+; SetBellMode      ; AC27  ; 6        ; 95           ; 11           ; 1           ; 36                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SetHourBellKey   ; AC24  ; 6        ; 95           ; 3            ; 3           ; 1                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
+; SetMinuteBellKey ; AC26  ; 6        ; 95           ; 4            ; 0           ; 2                     ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 ; nCR              ; AB26  ; 6        ; 95           ; 9            ; 2           ; 40                    ; 0                  ; no     ; no             ; no            ; no              ; no       ; Off          ; 3.3-V LVTTL  ; Off         ; User                 ;
 +------------------+-------+----------+--------------+--------------+-------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+----------------------+
 
@@ -258,64 +258,64 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
 ; Name        ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Cell number ; Output Register ; Output Enable Register ; Power Up High ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination ; Location assigned by ; Load ; Output Enable Source ; Output Enable Group ;
 +-------------+-------+----------+--------------+--------------+-------------+-----------------+------------------------+---------------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-------------+----------------------+------+----------------------+---------------------+
-; BellRadio   ; AC14  ; 8        ; 40           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhBell[0] ; AJ17  ; 7        ; 58           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhBell[1] ; AE17  ; 7        ; 58           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhBell[2] ; AD14  ; 8        ; 38           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhBell[3] ; E15   ; 3        ; 44           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhShow[0] ; AG13  ; 8        ; 40           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhShow[1] ; AK14  ; 8        ; 44           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhShow[2] ; AG14  ; 8        ; 40           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HouhShow[3] ; AJ13  ; 8        ; 44           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulBell[0] ; AE15  ; 8        ; 42           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulBell[1] ; B16   ; 4        ; 49           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulBell[2] ; U2    ; 1        ; 0            ; 23           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulBell[3] ; L4    ; 2        ; 0            ; 36           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulShow[0] ; N8    ; 2        ; 0            ; 35           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulShow[1] ; T7    ; 1        ; 0            ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulShow[2] ; N9    ; 2        ; 0            ; 34           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HoulShow[3] ; M9    ; 2        ; 0            ; 41           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; HourRadio   ; H16   ; 4        ; 49           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourh[0]    ; AG17  ; 7        ; 56           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourh[1]    ; U23   ; 6        ; 95           ; 22           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourh[2]    ; AJ12  ; 8        ; 38           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourh[3]    ; AF14  ; 8        ; 42           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourl[0]    ; C15   ; 3        ; 44           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourl[1]    ; AH13  ; 8        ; 44           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourl[2]    ; B15   ; 3        ; 44           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Hourl[3]    ; E2    ; 2        ; 0            ; 40           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhBell[0] ; AJ15  ; 8        ; 47           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhBell[1] ; AK17  ; 7        ; 58           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhBell[2] ; F16   ; 4        ; 51           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhBell[3] ; AJ14  ; 8        ; 47           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhShow[0] ; P7    ; 2        ; 0            ; 32           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhShow[1] ; N4    ; 2        ; 0            ; 31           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhShow[2] ; T4    ; 1        ; 0            ; 24           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinhShow[3] ; T5    ; 1        ; 0            ; 24           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlBell[0] ; T27   ; 6        ; 95           ; 25           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlBell[1] ; D17   ; 4        ; 53           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlBell[2] ; E17   ; 4        ; 56           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlBell[3] ; AF16  ; 7        ; 56           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlShow[0] ; AC17  ; 7        ; 60           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlShow[1] ; AH17  ; 7        ; 56           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlShow[2] ; AJ18  ; 7        ; 60           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; MinlShow[3] ; G17   ; 4        ; 53           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minuteh[0]  ; T28   ; 6        ; 95           ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minuteh[1]  ; AJ16  ; 7        ; 51           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minuteh[2]  ; C17   ; 4        ; 51           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minuteh[3]  ; AH15  ; 8        ; 47           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minutel[0]  ; AD16  ; 7        ; 53           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minutel[1]  ; U29   ; 6        ; 95           ; 23           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minutel[2]  ; U5    ; 1        ; 0            ; 23           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Minutel[3]  ; AH16  ; 7        ; 51           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondh[0]  ; AG18  ; 7        ; 67           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondh[1]  ; AG19  ; 7        ; 65           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondh[2]  ; AF18  ; 7        ; 67           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondh[3]  ; U24   ; 6        ; 95           ; 22           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondl[0]  ; H17   ; 4        ; 53           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondl[1]  ; AC16  ; 7        ; 53           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondl[2]  ; AE16  ; 7        ; 51           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
-; Secondl[3]  ; AF15  ; 8        ; 42           ; 0            ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; BellRadio   ; AJ6   ; 8        ; 13           ; 0            ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; HouhBell[0] ; N28   ; 5        ; 95           ; 31           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HouhBell[1] ; P23   ; 5        ; 95           ; 31           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HouhBell[2] ; H21   ; 4        ; 87           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HouhBell[3] ; N29   ; 5        ; 95           ; 31           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HouhShow[0] ; L4    ; 2        ; 0            ; 36           ; 4           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HouhShow[1] ; M10   ; 2        ; 0            ; 37           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HouhShow[2] ; P9    ; 2        ; 0            ; 34           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HouhShow[3] ; F2    ; 2        ; 0            ; 39           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulBell[0] ; P26   ; 5        ; 95           ; 30           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulBell[1] ; B26   ; 4        ; 85           ; 51           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulBell[2] ; T7    ; 1        ; 0            ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulBell[3] ; U9    ; 1        ; 0            ; 21           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulShow[0] ; M5    ; 2        ; 0            ; 36           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulShow[1] ; N9    ; 2        ; 0            ; 34           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulShow[2] ; F1    ; 2        ; 0            ; 40           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HoulShow[3] ; E2    ; 2        ; 0            ; 40           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; HourRadio   ; W27   ; 6        ; 95           ; 19           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
+; Hourh[0]    ; P30   ; 5        ; 95           ; 29           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Hourh[1]    ; AD22  ; 7        ; 85           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Hourh[2]    ; T28   ; 6        ; 95           ; 24           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Hourh[3]    ; R23   ; 5        ; 95           ; 28           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Hourl[0]    ; V29   ; 6        ; 95           ; 21           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Hourl[1]    ; P27   ; 5        ; 95           ; 30           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Hourl[2]    ; T6    ; 1        ; 0            ; 24           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Hourl[3]    ; U4    ; 1        ; 0            ; 20           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhBell[0] ; V23   ; 6        ; 95           ; 20           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhBell[1] ; AC21  ; 7        ; 89           ; 0            ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhBell[2] ; C27   ; 4        ; 89           ; 51           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhBell[3] ; V28   ; 6        ; 95           ; 21           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhShow[0] ; T26   ; 6        ; 95           ; 25           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhShow[1] ; R26   ; 5        ; 95           ; 27           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhShow[2] ; AD21  ; 7        ; 89           ; 0            ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinhShow[3] ; T23   ; 5        ; 95           ; 27           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlBell[0] ; W30   ; 6        ; 95           ; 20           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlBell[1] ; U25   ; 6        ; 95           ; 22           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlBell[2] ; U29   ; 6        ; 95           ; 23           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlBell[3] ; U23   ; 6        ; 95           ; 22           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlShow[0] ; U3    ; 1        ; 0            ; 20           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlShow[1] ; R27   ; 5        ; 95           ; 28           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlShow[2] ; P29   ; 5        ; 95           ; 29           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; MinlShow[3] ; N4    ; 2        ; 0            ; 31           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minuteh[0]  ; W29   ; 6        ; 95           ; 20           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minuteh[1]  ; G21   ; 4        ; 87           ; 51           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minuteh[2]  ; Y29   ; 6        ; 95           ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minuteh[3]  ; T27   ; 6        ; 95           ; 25           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minutel[0]  ; R22   ; 5        ; 95           ; 28           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minutel[1]  ; P24   ; 5        ; 95           ; 31           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minutel[2]  ; N24   ; 5        ; 95           ; 32           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Minutel[3]  ; M30   ; 5        ; 95           ; 32           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondh[0]  ; V2    ; 1        ; 0            ; 19           ; 0           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondh[1]  ; W1    ; 1        ; 0            ; 19           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondh[2]  ; V3    ; 1        ; 0            ; 19           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondh[3]  ; W2    ; 1        ; 0            ; 19           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondl[0]  ; W8    ; 1        ; 0            ; 13           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondl[1]  ; W6    ; 1        ; 0            ; 13           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondl[2]  ; Y3    ; 1        ; 0            ; 17           ; 2           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
+; Secondl[3]  ; V7    ; 1        ; 0            ; 16           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; Fitter               ; 0 pF ; -                    ; -                   ;
 ; segH[0]     ; H6    ; 2        ; 0            ; 47           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; segH[10]    ; J2    ; 2        ; 0            ; 36           ; 1           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
 ; segH[11]    ; H1    ; 2        ; 0            ; 39           ; 3           ; no              ; no                     ; no            ; no              ; no         ; no            ; no       ; Off          ; 3.3-V LVTTL  ; 24mA             ; Off         ; User                 ; 0 pF ; -                    ; -                   ;
@@ -372,14 +372,14 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 +----------+------------------+---------------+--------------+
 ; I/O Bank ; Usage            ; VCCIO Voltage ; VREF Voltage ;
 +----------+------------------+---------------+--------------+
-; 1        ; 5 / 85 ( 6 % )   ; 3.3V          ; --           ;
-; 2        ; 49 / 79 ( 62 % ) ; 3.3V          ; --           ;
-; 3        ; 3 / 72 ( 4 % )   ; 3.3V          ; --           ;
-; 4        ; 10 / 74 ( 14 % ) ; 3.3V          ; --           ;
-; 5        ; 0 / 85 ( 0 % )   ; 3.3V          ; --           ;
-; 6        ; 10 / 81 ( 12 % ) ; 3.3V          ; --           ;
-; 7        ; 23 / 74 ( 31 % ) ; 3.3V          ; --           ;
-; 8        ; 18 / 72 ( 25 % ) ; 3.3V          ; --           ;
+; 1        ; 13 / 85 ( 15 % ) ; 3.3V          ; --           ;
+; 2        ; 51 / 79 ( 65 % ) ; 3.3V          ; --           ;
+; 3        ; 0 / 72 ( 0 % )   ; 3.3V          ; --           ;
+; 4        ; 4 / 74 ( 5 % )   ; 3.3V          ; --           ;
+; 5        ; 15 / 85 ( 18 % ) ; 3.3V          ; --           ;
+; 6        ; 22 / 81 ( 27 % ) ; 3.3V          ; --           ;
+; 7        ; 8 / 74 ( 11 % )  ; 3.3V          ; --           ;
+; 8        ; 5 / 72 ( 7 % )   ; 3.3V          ; --           ;
 +----------+------------------+---------------+--------------+
 
 
@@ -470,7 +470,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AB22     ;            ;          ; VCCD_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; AB23     ; 318        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AB24     ; 323        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AB25     ; 341        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; AB25     ; 341        ; 6        ; BellEn                                   ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; AB26     ; 342        ; 6        ; nCR                                      ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; AB27     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AB28     ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -489,20 +489,20 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AC11     ; 196        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC12     ; 201        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC13     ; 223        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC14     ; 231        ; 8        ; BellRadio                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AC15     ; 245        ; 7        ; SetBellMode                              ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AC16     ; 250        ; 7        ; Secondl[1]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AC17     ; 259        ; 7        ; MinlShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AC14     ; 231        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC15     ; 245        ; 7        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; AC16     ; 250        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC17     ; 259        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC18     ; 272        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AC19     ; 282        ; 7        ; segS[7]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AC20     ; 293        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AC21     ; 307        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AC21     ; 307        ; 7        ; MinhBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AC22     ;            ;          ; VCCA_PLL4                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; AC23     ; 321        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AC24     ; 322        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; AC24     ; 322        ; 6        ; SetHourBellKey                           ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; AC25     ; 328        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AC26     ; 329        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; AC27     ; 350        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; AC26     ; 329        ; 6        ; SetMinuteBellKey                         ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
+; AC27     ; 350        ; 6        ; SetBellMode                              ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; AC28     ; 351        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC29     ; 365        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AC30     ; 366        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -519,15 +519,15 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AD11     ; 202        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD12     ; 210        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD13     ; 222        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD14     ; 229        ; 8        ; HouhBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD14     ; 229        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD15     ; 244        ; 7        ; CP                                       ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
-; AD16     ; 249        ; 7        ; Minutel[0]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD16     ; 249        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD17     ; 258        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD18     ; 271        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD19     ; 281        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AD20     ; 294        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD21     ; 306        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AD22     ; 301        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AD21     ; 306        ; 7        ; MinhShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AD22     ; 301        ; 7        ; Hourh[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; AD23     ;            ;          ; GNDA_PLL4                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AD24     ; 319        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; AD25     ; 320        ; 6        ; ~LVDS195p/nCEO~                          ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
@@ -550,9 +550,9 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AE12     ; 209        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE13     ; 221        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE14     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AE15     ; 235        ; 8        ; HoulBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE16     ; 248        ; 7        ; Secondl[2]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AE17     ; 255        ; 7        ; HouhBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AE15     ; 235        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE16     ; 248        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AE17     ; 255        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AE18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AE19     ; 284        ; 7        ; segS[6]                                  ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AE20     ; 290        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -579,11 +579,11 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AF11     ; 203        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF12     ; 217        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF13     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AF14     ; 233        ; 8        ; Hourh[3]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF15     ; 234        ; 8        ; Secondl[3]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AF16     ; 252        ; 7        ; MinlBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF14     ; 233        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF15     ; 234        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AF16     ; 252        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF17     ; 264        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AF18     ; 269        ; 7        ; Secondh[2]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AF18     ; 269        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF19     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AF20     ; 276        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AF21     ; 289        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -608,13 +608,13 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AG10     ; 212        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG11     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG12     ; 226        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AG13     ; 230        ; 8        ; HouhShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG14     ; 232        ; 8        ; HouhShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG13     ; 230        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AG14     ; 232        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG15     ; 242        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AG16     ; 251        ; 7        ; SetMinuteBellKey                         ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG17     ; 254        ; 7        ; Hourh[0]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG18     ; 270        ; 7        ; Secondh[0]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AG19     ; 268        ; 7        ; Secondh[1]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AG16     ; 251        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AG17     ; 254        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AG18     ; 270        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AG19     ; 268        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG20     ; 275        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AG21     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AG22     ; 292        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -638,11 +638,11 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AH10     ; 211        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH11     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AH12     ; 225        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AH13     ; 237        ; 8        ; Hourl[1]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH13     ; 237        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH14     ; 243        ; 8        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; AH15     ; 241        ; 8        ; Minuteh[3]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AH16     ; 247        ; 7        ; Minutel[3]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AH17     ; 253        ; 7        ; MinlShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AH15     ; 241        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AH16     ; 247        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AH17     ; 253        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH18     ; 261        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH19     ; 267        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AH20     ; 283        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -661,19 +661,19 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AJ3      ; 179        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ4      ; 184        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ5      ; 187        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AJ6      ; 194        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ6      ; 194        ; 8        ; BellRadio                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; Y               ; no       ; Off          ;
 ; AJ7      ; 199        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ8      ; 206        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ9      ; 214        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ10     ; 216        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ11     ; 220        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; AJ12     ; 228        ; 8        ; Hourh[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AJ13     ; 236        ; 8        ; HouhShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AJ14     ; 239        ; 8        ; MinhBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AJ15     ; 240        ; 8        ; MinhBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AJ16     ; 246        ; 7        ; Minuteh[1]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AJ17     ; 257        ; 7        ; HouhBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; AJ18     ; 260        ; 7        ; MinlShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AJ12     ; 228        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ13     ; 236        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ14     ; 239        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ15     ; 240        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ16     ; 246        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ17     ; 257        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; AJ18     ; 260        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ19     ; 263        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ20     ; 266        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AJ21     ; 274        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -698,10 +698,10 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; AK11     ; 219        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK12     ; 227        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK13     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; AK14     ; 238        ; 8        ; HouhShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AK14     ; 238        ; 8        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK15     ;            ; 8        ; VCCIO8                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; AK16     ;            ; 7        ; VCCIO7                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; AK17     ; 256        ; 7        ; MinhBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; AK17     ; 256        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK18     ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; AK19     ; 262        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; AK20     ; 265        ; 7        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -728,8 +728,8 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; B12      ; 577        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B13      ; 573        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B14      ; 568        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B15      ; 565        ; 3        ; Hourl[2]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; B16      ; 559        ; 4        ; HoulBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; B15      ; 565        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B16      ; 559        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B17      ; 548        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B18      ; 547        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B19      ; 544        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -739,7 +739,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; B23      ; 517        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B24      ; 513        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B25      ; 509        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; B26      ; 502        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; B26      ; 502        ; 4        ; HoulBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; B27      ; 499        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B28      ; 496        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; B29      ; 493        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -758,9 +758,9 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; C12      ; 584        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C13      ; 572        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C14      ; 575        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C15      ; 564        ; 3        ; Hourl[0]                                 ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C16      ; 558        ; 4        ; BellEn                                   ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; C17      ; 554        ; 4        ; Minuteh[2]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; C15      ; 564        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C16      ; 558        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C17      ; 554        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C18      ; 546        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C19      ; 538        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C20      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -770,7 +770,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; C24      ; 516        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C25      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; C26      ; 504        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; C27      ; 498        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; C27      ; 498        ; 4        ; MinhBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; C28      ; 492        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; C29      ; 473        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; C30      ; 472        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -790,7 +790,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; D14      ; 571        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D15      ; 567        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D16      ; 561        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; D17      ; 553        ; 4        ; MinlBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; D17      ; 553        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D18      ; 541        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D19      ; 537        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; D20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -805,7 +805,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; D29      ; 474        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; D30      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E1       ; 37         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; E2       ; 38         ; 2        ; Hourl[3]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E2       ; 38         ; 2        ; HoulShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; E3       ; 12         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E4       ; 13         ; 2        ; segH[6]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; E5       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -818,9 +818,9 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; E12      ; 589        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E13      ; 579        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E14      ; 570        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; E15      ; 566        ; 3        ; HouhBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E15      ; 566        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E16      ; 560        ; 4        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; E17      ; 550        ; 4        ; MinlBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; E17      ; 550        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E18      ;            ; 4        ; VCCIO4                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; E19      ; 534        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; E20      ; 530        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -834,8 +834,8 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; E28      ; 477        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E29      ; 470        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; E30      ; 471        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F1       ; 39         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; F2       ; 40         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; F1       ; 39         ; 2        ; HoulShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F2       ; 40         ; 2        ; HouhShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; F3       ; 6          ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; F4       ; 7          ; 2        ; segH[5]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; F5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -849,7 +849,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; F13      ; 580        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F14      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F15      ;            ; 3        ; VCCIO3                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; F16      ; 556        ; 4        ; MinhBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; F16      ; 556        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F17      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F18      ; 543        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; F19      ; 533        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
@@ -879,12 +879,12 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; G13      ; 582        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G14      ; 576        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G15      ; 562        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; G16      ; 555        ; 4        ; SetHourBellKey                           ; input  ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; G17      ; 551        ; 4        ; MinlShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; G16      ; 555        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G17      ; 551        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G18      ; 542        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G19      ; 521        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G20      ; 511        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; G21      ; 500        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; G21      ; 500        ; 4        ; Minuteh[1]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; G22      ; 489        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; G23      ;            ;          ; GNDA_PLL2                                ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G24      ; 486        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -909,12 +909,12 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; H13      ; 587        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H14      ; 574        ; 3        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H15      ; 563        ; 3        ; GND+                                     ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
-; H16      ; 557        ; 4        ; HourRadio                                ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
-; H17      ; 552        ; 4        ; Secondl[0]                               ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
+; H16      ; 557        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; H17      ; 552        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H18      ; 535        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H19      ; 524        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
 ; H20      ; 512        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
-; H21      ; 501        ; 4        ; GND*                                     ;        ;              ;         ; Column I/O ;                 ; no       ; Off          ;
+; H21      ; 501        ; 4        ; HouhBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Column I/O ; N               ; no       ; Off          ;
 ; H22      ;            ;          ; VCCA_PLL2                                ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; H23      ; 487        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; H24      ; 485        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -987,7 +987,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; L1       ; 60         ; 2        ; segM[9]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L2       ; 61         ; 2        ; segM[10]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L3       ; 54         ; 2        ; segM[11]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; L4       ; 55         ; 2        ; HoulBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; L4       ; 55         ; 2        ; HouhShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; L5       ; 34         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; L6       ; 33         ; 2        ; segM[7]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; L7       ; 28         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1018,12 +1018,12 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; M2       ; 65         ; 2        ; segM[6]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; M3       ; 66         ; 2        ; segM[8]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; M4       ; 67         ; 2        ; segS[15]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; M5       ; 53         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M5       ; 53         ; 2        ; HoulShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M6       ; 49         ; 2        ; segS[14]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; M7       ; 50         ; 2        ; segS[13]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; M8       ; 36         ; 2        ; segS[12]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; M9       ; 35         ; 2        ; HoulShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; M10      ; 48         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M9       ; 35         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M10      ; 48         ; 2        ; HouhShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; M11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M12      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; M13      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1043,16 +1043,16 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; M27      ; 438        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M28      ; 430        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; M29      ; 425        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; M30      ; 426        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; M30      ; 426        ; 5        ; Minutel[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N2       ; 68         ; 2        ; segM[3]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N3       ; 69         ; 2        ; segM[4]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; N4       ; 71         ; 2        ; MinhShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N4       ; 71         ; 2        ; MinlShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N5       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; N6       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N7       ; 59         ; 2        ; segS[11]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; N8       ; 58         ; 2        ; HoulShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; N9       ; 63         ; 2        ; HoulShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N8       ; 58         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N9       ; 63         ; 2        ; HoulShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N10      ; 47         ; 2        ; segS[10]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; N11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; N12      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1067,12 +1067,12 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; N21      ; 429        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N22      ; 428        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N23      ; 444        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N24      ; 424        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N24      ; 424        ; 5        ; Minutel[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N25      ; 423        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; N26      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; N27      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; N28      ; 421        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; N29      ; 422        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; N28      ; 421        ; 5        ; HouhBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; N29      ; 422        ; 5        ; HouhBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; N30      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P1       ; 75         ; 2        ; segM[0]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P2       ; 76         ; 2        ; segM[1]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
@@ -1080,9 +1080,9 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; P4       ; 74         ; 2        ; segS[9]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; P5       ; 78         ; 2        ; #TCK                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
 ; P6       ; 72         ; 2        ; segS[8]                                  ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
-; P7       ; 70         ; 2        ; MinhShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P7       ; 70         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; P8       ; 77         ; 2        ; #TDI                                     ; input  ;              ;         ; --         ;                 ; --       ; --           ;
-; P9       ; 62         ; 2        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P9       ; 62         ; 2        ; HouhShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P10      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P12      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1096,14 +1096,14 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; P20      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; P21      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; P22      ; 427        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P23      ; 420        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P24      ; 419        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P23      ; 420        ; 5        ; HouhBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P24      ; 419        ; 5        ; Minutel[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P25      ; 418        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P26      ; 417        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P27      ; 416        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P26      ; 417        ; 5        ; HoulBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P27      ; 416        ; 5        ; Hourl[1]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; P28      ; 415        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P29      ; 413        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; P30      ; 414        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; P29      ; 413        ; 5        ; MinlShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; P30      ; 414        ; 5        ; Hourh[0]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R1       ;            ; 2        ; VCCIO2                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; R2       ; 84         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; R3       ; 85         ; 2        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -1125,22 +1125,22 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; R19      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; R20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; R21      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
-; R22      ; 411        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R23      ; 410        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R22      ; 411        ; 5        ; Minutel[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R23      ; 410        ; 5        ; Hourh[3]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R24      ; 407        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; R25      ; 412        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R26      ; 408        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; R27      ; 409        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; R26      ; 408        ; 5        ; MinhShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; R27      ; 409        ; 5        ; MinlShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; R28      ; 403        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; R29      ; 404        ; 5        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; R30      ;            ; 5        ; VCCIO5                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T1       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T2       ; 87         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T3       ; 88         ; 1        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; T4       ; 91         ; 1        ; MinhShow[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T5       ; 92         ; 1        ; MinhShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T6       ; 89         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T7       ; 90         ; 1        ; HoulShow[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T4       ; 91         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T5       ; 92         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T6       ; 89         ; 1        ; Hourl[2]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T7       ; 90         ; 1        ; HoulBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T8       ; 97         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T9       ; 96         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; T10      ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
@@ -1156,23 +1156,23 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; T20      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; T21      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; T22      ; 406        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T23      ; 405        ; 5        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; T23      ; 405        ; 5        ; MinhShow[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T24      ; 402        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; T25      ; 401        ; 6        ; GND+                                     ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
-; T26      ; 400        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; T27      ; 399        ; 6        ; MinlBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; T28      ; 397        ; 6        ; Minuteh[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T26      ; 400        ; 6        ; MinhShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T27      ; 399        ; 6        ; Minuteh[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; T28      ; 397        ; 6        ; Hourh[2]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; T29      ; 398        ; 6        ; Adj_M                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; T30      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; U1       ; 93         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U2       ; 94         ; 1        ; HoulBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U3       ; 102        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U4       ; 103        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U5       ; 95         ; 1        ; Minutel[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U2       ; 94         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U3       ; 102        ; 1        ; MinlShow[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U4       ; 103        ; 1        ; Hourl[3]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U5       ; 95         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U6       ; 100        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U7       ; 101        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; U8       ; 99         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; U9       ; 98         ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U9       ; 98         ; 1        ; HoulBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; U10      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U11      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U12      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -1186,21 +1186,21 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; U20      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; U21      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; U22      ; 396        ; 6        ; ^MSEL0                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; U23      ; 390        ; 6        ; Hourh[1]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U24      ; 389        ; 6        ; Secondh[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
-; U25      ; 388        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U23      ; 390        ; 6        ; MinlBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U24      ; 389        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; U25      ; 388        ; 6        ; MinlBell[1]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; U26      ; 393        ; 6        ; ^nSTATUS                                 ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; U27      ; 394        ; 6        ; ^CONF_DONE                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; U28      ; 395        ; 6        ; ^MSEL1                                   ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; U29      ; 391        ; 6        ; Minutel[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; U29      ; 391        ; 6        ; MinlBell[2]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; U30      ; 392        ; 6        ; Adj_H                                    ; input  ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; V1       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; V2       ; 104        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V3       ; 105        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V2       ; 104        ; 1        ; Secondh[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V3       ; 105        ; 1        ; Secondh[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; V4       ; 108        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V5       ;            ; 1        ; VCCIO1                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V6       ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; V7       ; 118        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V7       ; 118        ; 1        ; Secondl[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; V8       ; 117        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V9       ; 116        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V10      ; 115        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1216,22 +1216,22 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; V20      ;            ;          ; VCCINT                                   ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; V21      ; 373        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V22      ; 370        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V23      ; 382        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V23      ; 382        ; 6        ; MinhBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; V24      ; 368        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; V25      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; V26      ;            ; 6        ; VCCIO6                                   ; power  ;              ; 3.3V    ; --         ;                 ; --       ; --           ;
 ; V27      ; 387        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V28      ; 385        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; V29      ; 386        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; V28      ; 385        ; 6        ; MinhBell[3]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; V29      ; 386        ; 6        ; Hourl[0]                                 ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; V30      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; W1       ; 106        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W2       ; 107        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W1       ; 106        ; 1        ; Secondh[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W2       ; 107        ; 1        ; Secondh[3]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W3       ; 109        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W4       ; 110        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W5       ; 119        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W6       ; 128        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W6       ; 128        ; 1        ; Secondl[1]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W7       ; 130        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W8       ; 129        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W8       ; 129        ; 1        ; Secondl[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; W9       ; 126        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W10      ; 127        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W11      ;            ;          ; GND                                      ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
@@ -1250,13 +1250,13 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; W24      ; 359        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W25      ; 367        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; W26      ; 362        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W27      ; 378        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W27      ; 378        ; 6        ; HourRadio                                ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; Y               ; no       ; Off          ;
 ; W28      ; 379        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W29      ; 383        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; W30      ; 384        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; W29      ; 383        ; 6        ; Minuteh[0]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
+; W30      ; 384        ; 6        ; MinlBell[0]                              ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y1       ; 111        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y2       ; 112        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y3       ; 113        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y3       ; 113        ; 1        ; Secondl[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y4       ; 114        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y5       ; 131        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y6       ; 144        ; 1        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
@@ -1282,7 +1282,7 @@ The pin-out file can be found in C:/Users/row31976300/Documents/ForLearning/elc/
 ; Y26      ; 360        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y27      ; 375        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 ; Y28      ; 374        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
-; Y29      ; 380        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
+; Y29      ; 380        ; 6        ; Minuteh[2]                               ; output ; 3.3-V LVTTL  ;         ; Row I/O    ; N               ; no       ; Off          ;
 ; Y30      ; 381        ; 6        ; GND*                                     ;        ;              ;         ; Row I/O    ;                 ; no       ; Off          ;
 +----------+------------+----------+------------------------------------------+--------+--------------+---------+------------+-----------------+----------+--------------+
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
@@ -1330,9 +1330,9 @@ Note: User assignments will override these defaults. The user specified values a
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------+--------------+
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name                ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+------------------------------------+--------------+
-; |Clock                     ; 163 (24)    ; 56 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 115  ; 0            ; 107 (24)     ; 0 (0)             ; 56 (0)           ; |Clock                             ; work         ;
+; |Clock                     ; 179 (24)    ; 40 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 115  ; 0            ; 139 (24)     ; 0 (0)             ; 40 (0)           ; |Clock                             ; work         ;
 ;    |BellAlarm:Ba0|         ; 12 (12)     ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 12 (12)      ; 0 (0)             ; 0 (0)            ; |Clock|BellAlarm:Ba0               ;              ;
-;    |BellSet:Bs0|           ; 48 (20)     ; 32 (16)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 16 (4)       ; 0 (0)             ; 32 (16)          ; |Clock|BellSet:Bs0                 ;              ;
+;    |BellSet:Bs0|           ; 64 (36)     ; 16 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 48 (36)      ; 0 (0)             ; 16 (0)           ; |Clock|BellSet:Bs0                 ;              ;
 ;       |Counter10:BMin0|    ; 5 (5)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 1 (1)        ; 0 (0)             ; 4 (4)            ; |Clock|BellSet:Bs0|Counter10:BMin0 ;              ;
 ;       |Counter12:BHou|     ; 17 (17)     ; 8 (8)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 0 (0)             ; 8 (8)            ; |Clock|BellSet:Bs0|Counter12:BHou  ;              ;
 ;       |Counter6:BMin1|     ; 6 (6)       ; 4 (4)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 2 (2)        ; 0 (0)             ; 4 (4)            ; |Clock|BellSet:Bs0|Counter6:BMin1  ;              ;
@@ -1459,15 +1459,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; segH[15]         ; Output   ; --            ; --            ; --                    ; --  ;
 ; HourRadio        ; Output   ; --            ; --            ; --                    ; --  ;
 ; BellRadio        ; Output   ; --            ; --            ; --                    ; --  ;
-; SetBellMode      ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
+; SetBellMode      ; Input    ; (0) 299 ps    ; (6) 4075 ps   ; --                    ; --  ;
 ; CP               ; Input    ; (0) 287 ps    ; (0) 287 ps    ; --                    ; --  ;
 ; Adj_M            ; Input    ; (6) 4075 ps   ; (0) 299 ps    ; --                    ; --  ;
 ; EN               ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
-; BellEn           ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
+; BellEn           ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 ; nCR              ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 ; Adj_H            ; Input    ; (0) 299 ps    ; (6) 4075 ps   ; --                    ; --  ;
-; SetMinuteBellKey ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
-; SetHourBellKey   ; Input    ; (6) 4114 ps   ; (6) 4114 ps   ; --                    ; --  ;
+; SetMinuteBellKey ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
+; SetHourBellKey   ; Input    ; (6) 4075 ps   ; (6) 4075 ps   ; --                    ; --  ;
 +------------------+----------+---------------+---------------+-----------------------+-----+
 
 
@@ -1477,63 +1477,99 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Source Pin / Fanout                     ; Pad To Core Index ; Setting ;
 +-----------------------------------------+-------------------+---------+
 ; SetBellMode                             ;                   ;         ;
+;      - MinhShow~0                       ; 1                 ; 6       ;
+;      - MinhShow~1                       ; 1                 ; 6       ;
+;      - MinhShow~2                       ; 1                 ; 6       ;
+;      - MinhShow~3                       ; 1                 ; 6       ;
+;      - MinlShow~0                       ; 1                 ; 6       ;
+;      - MinlShow~1                       ; 1                 ; 6       ;
+;      - MinlShow~2                       ; 1                 ; 6       ;
+;      - MinlShow~3                       ; 1                 ; 6       ;
+;      - HouhShow~0                       ; 1                 ; 6       ;
+;      - HouhShow~1                       ; 1                 ; 6       ;
+;      - HouhShow~2                       ; 1                 ; 6       ;
+;      - HouhShow~3                       ; 1                 ; 6       ;
+;      - HoulShow~0                       ; 1                 ; 6       ;
+;      - HoulShow~1                       ; 1                 ; 6       ;
+;      - HoulShow~2                       ; 1                 ; 6       ;
+;      - HoulShow~3                       ; 1                 ; 6       ;
+;      - BellAlarm:Ba0|BellRadio~5        ; 1                 ; 6       ;
+;      - BellSet:Bs0|mhEN~0               ; 1                 ; 6       ;
+;      - BellSet:Bs0|mlEN~0               ; 1                 ; 6       ;
+;      - BellSet:Bs0|hEN~0                ; 1                 ; 6       ;
+;      - BellSet:Bs0|MinhBell[0]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|MinhBell[1]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|MinhBell[2]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|MinhBell[3]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|MinlBell[0]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|MinlBell[1]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|MinlBell[2]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|MinlBell[3]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HouhBell[0]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HouhBell[1]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HouhBell[2]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HouhBell[3]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HoulBell[0]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HoulBell[1]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HoulBell[2]          ; 0                 ; 0       ;
+;      - BellSet:Bs0|HoulBell[3]          ; 0                 ; 0       ;
 ; CP                                      ;                   ;         ;
 ; Adj_M                                   ;                   ;         ;
 ;      - EN_M_H                           ; 0                 ; 6       ;
 ;      - EN_M_L                           ; 0                 ; 6       ;
 ;      - clk_m                            ; 1                 ; 0       ;
 ; EN                                      ;                   ;         ;
-;      - Counter10:USec0|Q[3]             ; 1                 ; 6       ;
-;      - Counter10:USec0|Q[1]             ; 1                 ; 6       ;
-;      - Counter10:USec0|Q[0]             ; 1                 ; 6       ;
-;      - BellAlarm:Ba0|BellRadio~5        ; 1                 ; 6       ;
-;      - Counter10:USec0|Q[2]~1           ; 1                 ; 6       ;
-;      - BellSet:Bs0|mhEN~0               ; 1                 ; 6       ;
-;      - BellSet:Bs0|mlEN~0               ; 1                 ; 6       ;
-;      - BellSet:Bs0|hEN~0                ; 1                 ; 6       ;
+;      - Counter10:USec0|Q[3]             ; 0                 ; 6       ;
+;      - Counter10:USec0|Q[1]             ; 0                 ; 6       ;
+;      - Counter10:USec0|Q[0]             ; 0                 ; 6       ;
+;      - BellAlarm:Ba0|BellRadio~5        ; 0                 ; 6       ;
+;      - Counter10:USec0|Q[2]~1           ; 0                 ; 6       ;
+;      - BellSet:Bs0|mhEN~0               ; 0                 ; 6       ;
+;      - BellSet:Bs0|mlEN~0               ; 0                 ; 6       ;
+;      - BellSet:Bs0|hEN~0                ; 0                 ; 6       ;
 ; BellEn                                  ;                   ;         ;
 ;      - BellAlarm:Ba0|BellRadio~5        ; 0                 ; 6       ;
 ; nCR                                     ;                   ;         ;
-;      - Counter10:USec0|Q[0]             ; 1                 ; 6       ;
-;      - Counter10:USec0|Q[1]             ; 1                 ; 6       ;
-;      - Counter10:USec0|Q[2]             ; 1                 ; 6       ;
-;      - Counter10:USec0|Q[3]             ; 1                 ; 6       ;
-;      - Counter6:USec1|Q[0]              ; 1                 ; 6       ;
-;      - Counter6:USec1|Q[1]              ; 1                 ; 6       ;
-;      - Counter6:USec1|Q[2]              ; 1                 ; 6       ;
-;      - Counter6:USec1|Q[3]              ; 1                 ; 6       ;
-;      - Counter10:UMin0|Q[0]             ; 1                 ; 6       ;
-;      - Counter10:UMin0|Q[1]             ; 1                 ; 6       ;
-;      - Counter10:UMin0|Q[2]             ; 1                 ; 6       ;
-;      - Counter10:UMin0|Q[3]             ; 1                 ; 6       ;
-;      - Counter6:UMin1|Q[0]              ; 1                 ; 6       ;
-;      - Counter6:UMin1|Q[1]              ; 1                 ; 6       ;
-;      - Counter6:UMin1|Q[2]              ; 1                 ; 6       ;
-;      - Counter6:UMin1|Q[3]              ; 1                 ; 6       ;
-;      - Counter12:UHou|ql[0]             ; 1                 ; 6       ;
-;      - Counter12:UHou|ql[1]             ; 1                 ; 6       ;
-;      - Counter12:UHou|ql[2]             ; 1                 ; 6       ;
-;      - Counter12:UHou|ql[3]             ; 1                 ; 6       ;
-;      - Counter12:UHou|qh[0]             ; 1                 ; 6       ;
-;      - Counter12:UHou|qh[1]             ; 1                 ; 6       ;
-;      - Counter12:UHou|qh[2]             ; 1                 ; 6       ;
-;      - Counter12:UHou|qh[3]             ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|qh[0] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|qh[1] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|qh[2] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|qh[3] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter6:BMin1|Q[0]  ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter6:BMin1|Q[1]  ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter6:BMin1|Q[2]  ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter6:BMin1|Q[3]  ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter10:BMin0|Q[0] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter10:BMin0|Q[1] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter10:BMin0|Q[2] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter10:BMin0|Q[3] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|ql[0] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|ql[1] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|ql[2] ; 1                 ; 6       ;
-;      - BellSet:Bs0|Counter12:BHou|ql[3] ; 1                 ; 6       ;
+;      - Counter10:USec0|Q[0]             ; 0                 ; 6       ;
+;      - Counter10:USec0|Q[1]             ; 0                 ; 6       ;
+;      - Counter10:USec0|Q[2]             ; 0                 ; 6       ;
+;      - Counter10:USec0|Q[3]             ; 0                 ; 6       ;
+;      - Counter6:USec1|Q[0]              ; 0                 ; 6       ;
+;      - Counter6:USec1|Q[1]              ; 0                 ; 6       ;
+;      - Counter6:USec1|Q[2]              ; 0                 ; 6       ;
+;      - Counter6:USec1|Q[3]              ; 0                 ; 6       ;
+;      - Counter10:UMin0|Q[0]             ; 0                 ; 6       ;
+;      - Counter10:UMin0|Q[1]             ; 0                 ; 6       ;
+;      - Counter10:UMin0|Q[2]             ; 0                 ; 6       ;
+;      - Counter10:UMin0|Q[3]             ; 0                 ; 6       ;
+;      - Counter6:UMin1|Q[0]              ; 0                 ; 6       ;
+;      - Counter6:UMin1|Q[1]              ; 0                 ; 6       ;
+;      - Counter6:UMin1|Q[2]              ; 0                 ; 6       ;
+;      - Counter6:UMin1|Q[3]              ; 0                 ; 6       ;
+;      - Counter12:UHou|ql[0]             ; 0                 ; 6       ;
+;      - Counter12:UHou|ql[1]             ; 0                 ; 6       ;
+;      - Counter12:UHou|ql[2]             ; 0                 ; 6       ;
+;      - Counter12:UHou|ql[3]             ; 0                 ; 6       ;
+;      - Counter12:UHou|qh[0]             ; 0                 ; 6       ;
+;      - Counter12:UHou|qh[1]             ; 0                 ; 6       ;
+;      - Counter12:UHou|qh[2]             ; 0                 ; 6       ;
+;      - Counter12:UHou|qh[3]             ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|qh[0] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|qh[1] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|qh[2] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|qh[3] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter6:BMin1|Q[0]  ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter6:BMin1|Q[1]  ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter6:BMin1|Q[2]  ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter6:BMin1|Q[3]  ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter10:BMin0|Q[0] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter10:BMin0|Q[1] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter10:BMin0|Q[2] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter10:BMin0|Q[3] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|ql[0] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|ql[1] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|ql[2] ; 0                 ; 6       ;
+;      - BellSet:Bs0|Counter12:BHou|ql[3] ; 0                 ; 6       ;
 ; Adj_H                                   ;                   ;         ;
 ;      - Counter12:UHou|qh[0]~7           ; 1                 ; 6       ;
 ;      - EN_H_L                           ; 1                 ; 6       ;
@@ -1542,7 +1578,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ;      - BellSet:Bs0|mhEN~0               ; 0                 ; 6       ;
 ;      - BellSet:Bs0|mlEN~0               ; 0                 ; 6       ;
 ; SetHourBellKey                          ;                   ;         ;
-;      - BellSet:Bs0|hEN~0                ; 0                 ; 6       ;
+;      - BellSet:Bs0|hEN~0                ; 1                 ; 6       ;
 +-----------------------------------------+-------------------+---------+
 
 
@@ -1551,22 +1587,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name                                 ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; BellSet:Bs0|Counter12:BHou|always0~2 ; LCCOMB_X49_Y23_N0  ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; BellSet:Bs0|Counter12:BHou|qh[3]~7   ; LCCOMB_X52_Y23_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; BellSet:Bs0|hEN~1                    ; LCCOMB_X49_Y23_N18 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; BellSet:Bs0|mhEN~0                   ; LCCOMB_X52_Y23_N20 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; BellSet:Bs0|mlEN~0                   ; LCCOMB_X50_Y24_N20 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; CP                                   ; PIN_AD15           ; 40      ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
-; Counter12:UHou|always0~2             ; LCCOMB_X50_Y23_N22 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
-; Counter12:UHou|qh[0]~7               ; LCCOMB_X51_Y23_N4  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; BellSet:Bs0|Counter12:BHou|always0~2 ; LCCOMB_X87_Y33_N26 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; BellSet:Bs0|Counter12:BHou|qh[3]~7   ; LCCOMB_X87_Y33_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; BellSet:Bs0|hEN~1                    ; LCCOMB_X88_Y33_N30 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; BellSet:Bs0|mhEN~0                   ; LCCOMB_X87_Y33_N18 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; BellSet:Bs0|mlEN~0                   ; LCCOMB_X88_Y33_N22 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; CP                                   ; PIN_AD15           ; 24      ; Clock        ; yes    ; Global Clock         ; GCLK14           ; --                        ;
+; Counter12:UHou|always0~2             ; LCCOMB_X87_Y20_N24 ; 8       ; Sync. clear  ; no     ; --                   ; --               ; --                        ;
+; Counter12:UHou|qh[0]~7               ; LCCOMB_X87_Y20_N4  ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
 ; EN                                   ; PIN_AA23           ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; EN_H_L                               ; LCCOMB_X51_Y23_N22 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; EN_M_H                               ; LCCOMB_X51_Y23_N18 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; EN_M_L                               ; LCCOMB_X67_Y23_N10 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; Equal0~0                             ; LCCOMB_X50_Y24_N14 ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; SetBellMode                          ; PIN_AC15           ; 36      ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; clk_h                                ; LCCOMB_X67_Y23_N16 ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK7            ; --                        ;
-; clk_m                                ; LCCOMB_X67_Y23_N6  ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; EN_H_L                               ; LCCOMB_X87_Y20_N30 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; EN_M_H                               ; LCCOMB_X87_Y20_N22 ; 7       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; EN_M_L                               ; LCCOMB_X88_Y20_N28 ; 4       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Equal0~0                             ; LCCOMB_X1_Y19_N26  ; 6       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SetBellMode                          ; PIN_AC27           ; 36      ; Latch enable ; no     ; --                   ; --               ; --                        ;
+; clk_h                                ; LCCOMB_X88_Y20_N24 ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK5            ; --                        ;
+; clk_m                                ; LCCOMB_X88_Y20_N18 ; 8       ; Clock        ; yes    ; Global Clock         ; GCLK6            ; --                        ;
 ; nCR                                  ; PIN_AB26           ; 40      ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +--------------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
@@ -1576,9 +1612,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+--------------------+---------+----------------------+------------------+---------------------------+
 ; Name  ; Location           ; Fan-Out ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+--------------------+---------+----------------------+------------------+---------------------------+
-; CP    ; PIN_AD15           ; 40      ; Global Clock         ; GCLK14           ; --                        ;
-; clk_h ; LCCOMB_X67_Y23_N16 ; 8       ; Global Clock         ; GCLK7            ; --                        ;
-; clk_m ; LCCOMB_X67_Y23_N6  ; 8       ; Global Clock         ; GCLK5            ; --                        ;
+; CP    ; PIN_AD15           ; 24      ; Global Clock         ; GCLK14           ; --                        ;
+; clk_h ; LCCOMB_X88_Y20_N24 ; 8       ; Global Clock         ; GCLK5            ; --                        ;
+; clk_m ; LCCOMB_X88_Y20_N18 ; 8       ; Global Clock         ; GCLK6            ; --                        ;
 +-------+--------------------+---------+----------------------+------------------+---------------------------+
 
 
@@ -1645,141 +1681,139 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------+-------------------------+
 ; Interconnect Resource Type ; Usage                   ;
 +----------------------------+-------------------------+
-; Block interconnects        ; 273 / 197,592 ( < 1 % ) ;
-; C16 interconnects          ; 63 / 6,270 ( 1 % )      ;
-; C4 interconnects           ; 428 / 123,120 ( < 1 % ) ;
-; Direct links               ; 46 / 197,592 ( < 1 % )  ;
+; Block interconnects        ; 304 / 197,592 ( < 1 % ) ;
+; C16 interconnects          ; 36 / 6,270 ( < 1 % )    ;
+; C4 interconnects           ; 361 / 123,120 ( < 1 % ) ;
+; Direct links               ; 62 / 197,592 ( < 1 % )  ;
 ; Global clocks              ; 3 / 16 ( 19 % )         ;
-; Local interconnects        ; 79 / 68,416 ( < 1 % )   ;
-; R24 interconnects          ; 110 / 5,926 ( 2 % )     ;
-; R4 interconnects           ; 331 / 167,484 ( < 1 % ) ;
+; Local interconnects        ; 97 / 68,416 ( < 1 % )   ;
+; R24 interconnects          ; 127 / 5,926 ( 2 % )     ;
+; R4 interconnects           ; 324 / 167,484 ( < 1 % ) ;
 +----------------------------+-------------------------+
 
 
 +----------------------------------------------------------------------------+
 ; LAB Logic Elements                                                         ;
 +---------------------------------------------+------------------------------+
-; Number of Logic Elements  (Average = 12.54) ; Number of LABs  (Total = 13) ;
+; Number of Logic Elements  (Average = 11.93) ; Number of LABs  (Total = 15) ;
 +---------------------------------------------+------------------------------+
 ; 1                                           ; 0                            ;
 ; 2                                           ; 0                            ;
-; 3                                           ; 1                            ;
+; 3                                           ; 2                            ;
 ; 4                                           ; 0                            ;
-; 5                                           ; 0                            ;
+; 5                                           ; 1                            ;
 ; 6                                           ; 1                            ;
-; 7                                           ; 1                            ;
-; 8                                           ; 1                            ;
-; 9                                           ; 0                            ;
+; 7                                           ; 0                            ;
+; 8                                           ; 0                            ;
+; 9                                           ; 2                            ;
 ; 10                                          ; 0                            ;
-; 11                                          ; 1                            ;
+; 11                                          ; 0                            ;
 ; 12                                          ; 0                            ;
 ; 13                                          ; 0                            ;
 ; 14                                          ; 0                            ;
 ; 15                                          ; 0                            ;
-; 16                                          ; 8                            ;
+; 16                                          ; 9                            ;
 +---------------------------------------------+------------------------------+
 
 
 +-------------------------------------------------------------------+
 ; LAB-wide Signals                                                  ;
 +------------------------------------+------------------------------+
-; LAB-wide Signals  (Average = 2.31) ; Number of LABs  (Total = 13) ;
+; LAB-wide Signals  (Average = 1.60) ; Number of LABs  (Total = 15) ;
 +------------------------------------+------------------------------+
-; 1 Async. clear                     ; 10                           ;
-; 1 Clock                            ; 4                            ;
-; 1 Clock enable                     ; 8                            ;
-; 1 Sync. clear                      ; 1                            ;
-; 2 Clock enables                    ; 1                            ;
-; 2 Clocks                           ; 6                            ;
+; 1 Async. clear                     ; 9                            ;
+; 1 Clock                            ; 8                            ;
+; 1 Clock enable                     ; 6                            ;
+; 2 Clocks                           ; 1                            ;
 +------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Signals Sourced                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Signals Sourced  (Average = 16.85) ; Number of LABs  (Total = 13) ;
+; Number of Signals Sourced  (Average = 14.60) ; Number of LABs  (Total = 15) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
+; 3                                            ; 1                            ;
 ; 4                                            ; 0                            ;
-; 5                                            ; 0                            ;
-; 6                                            ; 1                            ;
-; 7                                            ; 1                            ;
-; 8                                            ; 1                            ;
-; 9                                            ; 0                            ;
+; 5                                            ; 1                            ;
+; 6                                            ; 2                            ;
+; 7                                            ; 0                            ;
+; 8                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 0                            ;
-; 11                                           ; 1                            ;
+; 11                                           ; 0                            ;
 ; 12                                           ; 0                            ;
-; 13                                           ; 0                            ;
+; 13                                           ; 1                            ;
 ; 14                                           ; 0                            ;
 ; 15                                           ; 0                            ;
-; 16                                           ; 1                            ;
+; 16                                           ; 2                            ;
 ; 17                                           ; 0                            ;
-; 18                                           ; 1                            ;
-; 19                                           ; 1                            ;
+; 18                                           ; 0                            ;
+; 19                                           ; 2                            ;
 ; 20                                           ; 2                            ;
-; 21                                           ; 0                            ;
-; 22                                           ; 0                            ;
-; 23                                           ; 2                            ;
-; 24                                           ; 2                            ;
+; 21                                           ; 1                            ;
+; 22                                           ; 1                            ;
+; 23                                           ; 0                            ;
+; 24                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
 
-+---------------------------------------------------------------------------------+
-; LAB Signals Sourced Out                                                         ;
-+--------------------------------------------------+------------------------------+
-; Number of Signals Sourced Out  (Average = 11.46) ; Number of LABs  (Total = 13) ;
-+--------------------------------------------------+------------------------------+
-; 0                                                ; 0                            ;
-; 1                                                ; 0                            ;
-; 2                                                ; 0                            ;
-; 3                                                ; 1                            ;
-; 4                                                ; 0                            ;
-; 5                                                ; 1                            ;
-; 6                                                ; 0                            ;
-; 7                                                ; 1                            ;
-; 8                                                ; 2                            ;
-; 9                                                ; 0                            ;
-; 10                                               ; 0                            ;
-; 11                                               ; 0                            ;
-; 12                                               ; 0                            ;
-; 13                                               ; 2                            ;
-; 14                                               ; 1                            ;
-; 15                                               ; 2                            ;
-; 16                                               ; 3                            ;
-+--------------------------------------------------+------------------------------+
++--------------------------------------------------------------------------------+
+; LAB Signals Sourced Out                                                        ;
++-------------------------------------------------+------------------------------+
+; Number of Signals Sourced Out  (Average = 9.87) ; Number of LABs  (Total = 15) ;
++-------------------------------------------------+------------------------------+
+; 0                                               ; 0                            ;
+; 1                                               ; 0                            ;
+; 2                                               ; 0                            ;
+; 3                                               ; 2                            ;
+; 4                                               ; 0                            ;
+; 5                                               ; 1                            ;
+; 6                                               ; 1                            ;
+; 7                                               ; 0                            ;
+; 8                                               ; 0                            ;
+; 9                                               ; 2                            ;
+; 10                                              ; 3                            ;
+; 11                                              ; 1                            ;
+; 12                                              ; 1                            ;
+; 13                                              ; 0                            ;
+; 14                                              ; 1                            ;
+; 15                                              ; 2                            ;
+; 16                                              ; 1                            ;
++-------------------------------------------------+------------------------------+
 
 
 +-----------------------------------------------------------------------------+
 ; LAB Distinct Inputs                                                         ;
 +----------------------------------------------+------------------------------+
-; Number of Distinct Inputs  (Average = 12.31) ; Number of LABs  (Total = 13) ;
+; Number of Distinct Inputs  (Average = 10.00) ; Number of LABs  (Total = 15) ;
 +----------------------------------------------+------------------------------+
 ; 0                                            ; 0                            ;
 ; 1                                            ; 0                            ;
 ; 2                                            ; 0                            ;
-; 3                                            ; 0                            ;
-; 4                                            ; 2                            ;
+; 3                                            ; 1                            ;
+; 4                                            ; 4                            ;
 ; 5                                            ; 0                            ;
-; 6                                            ; 2                            ;
+; 6                                            ; 1                            ;
 ; 7                                            ; 1                            ;
 ; 8                                            ; 0                            ;
-; 9                                            ; 0                            ;
+; 9                                            ; 1                            ;
 ; 10                                           ; 1                            ;
-; 11                                           ; 0                            ;
-; 12                                           ; 1                            ;
-; 13                                           ; 2                            ;
-; 14                                           ; 0                            ;
-; 15                                           ; 0                            ;
+; 11                                           ; 1                            ;
+; 12                                           ; 0                            ;
+; 13                                           ; 0                            ;
+; 14                                           ; 1                            ;
+; 15                                           ; 1                            ;
 ; 16                                           ; 0                            ;
-; 17                                           ; 0                            ;
+; 17                                           ; 1                            ;
 ; 18                                           ; 0                            ;
 ; 19                                           ; 1                            ;
 ; 20                                           ; 0                            ;
-; 21                                           ; 1                            ;
-; 22                                           ; 1                            ;
+; 21                                           ; 0                            ;
+; 22                                           ; 0                            ;
 ; 23                                           ; 1                            ;
 +----------------------------------------------+------------------------------+
 
@@ -1826,7 +1860,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II Fitter
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jan 06 14:51:12 2021
+    Info: Processing started: Wed Jan 06 20:59:22 2021
 Info: Command: quartus_fit --read_settings_files=off --write_settings_files=off Clock -c Clock
 Info: Selected device EP2C70F896C6 for design "Clock"
 Info: Low junction temperature is 0 degrees C
@@ -1838,7 +1872,7 @@ Info: Fitter converted 3 user pins into dedicated programming pins
     Info: Pin ~ASDO~ is reserved at location G7
     Info: Pin ~nCSO~ is reserved at location K9
     Info: Pin ~LVDS195p/nCEO~ is reserved at location AD25
-Critical Warning: No exact pin location assignment(s) for 62 pins of 115 total pins
+Critical Warning: No exact pin location assignment(s) for 56 pins of 115 total pins
     Info: Pin Secondh[0] not assigned to an exact location on the device
     Info: Pin Secondh[1] not assigned to an exact location on the device
     Info: Pin Secondh[2] not assigned to an exact location on the device
@@ -1895,12 +1929,6 @@ Critical Warning: No exact pin location assignment(s) for 62 pins of 115 total p
     Info: Pin HoulBell[1] not assigned to an exact location on the device
     Info: Pin HoulBell[2] not assigned to an exact location on the device
     Info: Pin HoulBell[3] not assigned to an exact location on the device
-    Info: Pin HourRadio not assigned to an exact location on the device
-    Info: Pin BellRadio not assigned to an exact location on the device
-    Info: Pin SetBellMode not assigned to an exact location on the device
-    Info: Pin BellEn not assigned to an exact location on the device
-    Info: Pin SetMinuteBellKey not assigned to an exact location on the device
-    Info: Pin SetHourBellKey not assigned to an exact location on the device
 Info: Timing-driven compilation is using the Classic Timing Analyzer
 Info: Timing requirements not specified -- quality metrics such as performance and power consumption may be sacrificed to reduce compilation time.
 Info: Automatically promoted node CP (placed in PIN AD15 (CLK13, LVDSCLK6p, Input))
@@ -1924,7 +1952,7 @@ Extra Info: Finished moving registers into I/O cells, Multiplier Blocks, and RAM
 Info: Finished register packing
     Extra Info: No registers were packed into other blocks
 Info: Statistics of I/O pins that need to be placed that use the same VCCIO and VREF, before I/O pin placement
-    Info: Number of I/O pins in group: 62 (unused VREF, 3.3V VCCIO, 4 input, 58 output, 0 bidirectional)
+    Info: Number of I/O pins in group: 56 (unused VREF, 3.3V VCCIO, 0 input, 56 output, 0 bidirectional)
         Info: I/O standards used: 3.3-V LVTTL.
 Info: I/O bank details before I/O pin placement
     Info: Statistics of I/O banks
@@ -1933,25 +1961,25 @@ Info: I/O bank details before I/O pin placement
         Info: I/O bank number 3 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  72 pins available
         Info: I/O bank number 4 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  74 pins available
         Info: I/O bank number 5 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  85 pins available
-        Info: I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 5 total pin(s) used --  76 pins available
+        Info: I/O bank number 6 does not use VREF pins and has 3.3V VCCIO pins. 10 total pin(s) used --  71 pins available
         Info: I/O bank number 7 does not use VREF pins and has 3.3V VCCIO pins. 5 total pin(s) used --  69 pins available
-        Info: I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 4 total pin(s) used --  68 pins available
+        Info: I/O bank number 8 does not use VREF pins and has 3.3V VCCIO pins. 5 total pin(s) used --  67 pins available
 Info: Fitter preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement preparation operations beginning
 Info: Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info: Fitter placement operations beginning
 Info: Fitter placement was successful
 Info: Fitter placement operations ending: elapsed time is 00:00:01
-Info: Estimated most critical path is register to register delay of 1.550 ns
-    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X53_Y23; Fanout = 9; REG Node = 'Counter10:UMin0|Q[2]'
-    Info: 2: + IC(0.663 ns) + CELL(0.393 ns) = 1.056 ns; Loc. = LAB_X52_Y23; Fanout = 1; COMB Node = 'BellSet:Bs0|MinlBell[2]~9'
-    Info: 3: + IC(0.000 ns) + CELL(0.410 ns) = 1.466 ns; Loc. = LAB_X52_Y23; Fanout = 1; COMB Node = 'BellSet:Bs0|MinlBell[3]~10'
-    Info: 4: + IC(0.000 ns) + CELL(0.084 ns) = 1.550 ns; Loc. = LAB_X52_Y23; Fanout = 3; REG Node = 'BellSet:Bs0|MinlBell[3]'
-    Info: Total cell delay = 0.887 ns ( 57.23 % )
-    Info: Total interconnect delay = 0.663 ns ( 42.77 % )
+Info: Estimated most critical path is register to register delay of 3.202 ns
+    Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LAB_X87_Y20; Fanout = 8; REG Node = 'Counter6:UMin1|Q[3]'
+    Info: 2: + IC(0.931 ns) + CELL(0.150 ns) = 1.081 ns; Loc. = LAB_X89_Y20; Fanout = 3; COMB Node = 'Counter6:UMin1|Equal0~0'
+    Info: 3: + IC(0.603 ns) + CELL(0.420 ns) = 2.104 ns; Loc. = LAB_X87_Y20; Fanout = 4; COMB Node = 'EN_H_L'
+    Info: 4: + IC(0.438 ns) + CELL(0.660 ns) = 3.202 ns; Loc. = LAB_X86_Y20; Fanout = 11; REG Node = 'Counter12:UHou|ql[1]'
+    Info: Total cell delay = 1.230 ns ( 38.41 % )
+    Info: Total interconnect delay = 1.972 ns ( 61.59 % )
 Info: Fitter routing operations beginning
 Info: Average interconnect usage is 0% of the available device resources
-    Info: Peak interconnect usage is 2% of the available device resources in the region that extends from location X48_Y13 to location X59_Y25
+    Info: Peak interconnect usage is 2% of the available device resources in the region that extends from location X84_Y26 to location X95_Y38
 Info: Fitter routing operations ending: elapsed time is 00:00:00
 Info: The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info: Optimizations that may affect the design's routability were skipped
@@ -2068,8 +2096,8 @@ Info: Delay annotation completed successfully
 Warning: The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info: Quartus II Fitter was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 366 megabytes
-    Info: Processing ended: Wed Jan 06 14:51:21 2021
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:10
+    Info: Processing ended: Wed Jan 06 20:59:30 2021
+    Info: Elapsed time: 00:00:08
+    Info: Total CPU time (on all processors): 00:00:08
 
 

@@ -13,8 +13,8 @@ module Clock(
 	wire EN_SH, EM_ML, EM_MH, EM_HL, EN_HH, NU; // Carry Flag
 	wire EN_H_L, EN_H_H, EN_M_L, EM_M_H; // real Cin of the bit
 	wire clk_1Hz, clk_m, clk_h;
-	//clk_1hz(CP, clk_1Hz);
-	assign clk_1Hz=CP;//for waveform visual test
+	//clk_1hz(CP, clk_1Hz); // for real world test
+	assign clk_1Hz=CP;//for waveform simulation test
 	assign clk_h = clk_1Hz ~^ Adj_H;//clk for hour
 	assign clk_m = clk_1Hz ~^ Adj_M;//clk for minute
 	//clk_m/clk_h can receive the signals of both original clk and adj

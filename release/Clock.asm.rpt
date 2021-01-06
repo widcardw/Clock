@@ -1,5 +1,5 @@
 Assembler report for Clock
-Wed Jan 06 14:51:25 2021
+Wed Jan 06 20:59:34 2021
 Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
 
 
@@ -10,8 +10,8 @@ Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.sof
-  6. Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.pof
+  5. Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/release/Clock.sof
+  6. Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/release/Clock.pof
   7. Assembler Messages
 
 
@@ -38,7 +38,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Wed Jan 06 14:51:25 2021 ;
+; Assembler Status      ; Successful - Wed Jan 06 20:59:34 2021 ;
 ; Revision Name         ; Clock                                 ;
 ; Top-level Entity Name ; Clock                                 ;
 ; Family                ; Cyclone II                            ;
@@ -78,37 +78,37 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+----------+---------------+
 
 
-+--------------------------------------------------------------------------------+
-; Assembler Generated Files                                                      ;
-+--------------------------------------------------------------------------------+
-; File Name                                                                      ;
-+--------------------------------------------------------------------------------+
-; C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.sof ;
-; C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.pof ;
-+--------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------+
+; Assembler Generated Files                                                              ;
++----------------------------------------------------------------------------------------+
+; File Name                                                                              ;
++----------------------------------------------------------------------------------------+
+; C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/release/Clock.sof ;
+; C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/release/Clock.pof ;
++----------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.sof ;
-+----------------+-----------------------------------------------------------------------------------------+
-; Option         ; Setting                                                                                 ;
-+----------------+-----------------------------------------------------------------------------------------+
-; Device         ; EP2C70F896C6                                                                            ;
-; JTAG usercode  ; 0xFFFFFFFF                                                                              ;
-; Checksum       ; 0x00630710                                                                              ;
-+----------------+-----------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/release/Clock.sof ;
++----------------+-------------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                         ;
++----------------+-------------------------------------------------------------------------------------------------+
+; Device         ; EP2C70F896C6                                                                                    ;
+; JTAG usercode  ; 0xFFFFFFFF                                                                                      ;
+; Checksum       ; 0x006330BA                                                                                      ;
++----------------+-------------------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.pof ;
-+--------------------+-------------------------------------------------------------------------------------+
-; Option             ; Setting                                                                             ;
-+--------------------+-------------------------------------------------------------------------------------+
-; Device             ; EPCS16                                                                              ;
-; JTAG usercode      ; 0x00000000                                                                          ;
-; Checksum           ; 0x18798C1D                                                                          ;
-; Compression Ratio  ; 3                                                                                   ;
-+--------------------+-------------------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/release/Clock.pof ;
++--------------------+---------------------------------------------------------------------------------------------+
+; Option             ; Setting                                                                                     ;
++--------------------+---------------------------------------------------------------------------------------------+
+; Device             ; EPCS16                                                                                      ;
+; JTAG usercode      ; 0x00000000                                                                                  ;
+; Checksum           ; 0x1879C80C                                                                                  ;
+; Compression Ratio  ; 3                                                                                           ;
++--------------------+---------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -117,14 +117,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II Assembler
     Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
-    Info: Processing started: Wed Jan 06 14:51:21 2021
+    Info: Processing started: Wed Jan 06 20:59:31 2021
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Clock -c Clock
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 339 megabytes
-    Info: Processing ended: Wed Jan 06 14:51:25 2021
-    Info: Elapsed time: 00:00:04
+    Info: Processing ended: Wed Jan 06 20:59:34 2021
+    Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:03
 
 

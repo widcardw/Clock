@@ -6,8 +6,8 @@ module BellSet(
     output reg [3:0] MinhBell, HouhBell,
     output reg [3:0] MinlBell, HoulBell
 );
-    wire MinL_CF, MinH_CF;
-    wire mlEN, mhEN, hEN;
+    wire MinL_CF, MinH_CF; // Carry Flag
+    wire mlEN, mhEN, hEN; // EN of minute, hour bell
     wire [3:0]delta_mh, delta_ml, delta_hh, delta_hl;
     assign mlEN = EN && SetBellMode && SetMinuteBellKey;
     assign mhEN = EN && SetBellMode && SetMinuteBellKey && MinL_CF;
@@ -15,9 +15,11 @@ module BellSet(
     Counter10 BMin0(CP, nCR, mlEN, delta_ml, MinL_CF);
     Counter6 BMin1(CP, nCR, mhEN, delta_mh, MinH_CF);
     Counter12 BHou(CP, nCR, hEN, delta_hh, delta_hl);
-    always @ (posedge CP)
+    
+    //here maybe remain some problems
+    always @ (posedge CP or posedge SetBellMode)
     begin
-		if (SetBellMode)begin
+		if (SetBellMode) begin
 			MinhBell <= MinuteH + delta_mh;
 			MinlBell <= MinuteL + delta_ml;
 			HouhBell <= HourH + delta_hh;
@@ -33,6 +35,7 @@ module BellAlarm(
     input [3:0] BelMinh, BelMinl, BelHouh, BelHoul,
     output BellRadio
 );
+    // the bell rings for 1 minute
     assign BellRadio = CP&(EN&&BellEn&&(~SetBellMode)
         &&CurMinh==BelMinh
         &&CurMinl==BelMinl
