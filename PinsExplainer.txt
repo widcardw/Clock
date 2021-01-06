@@ -1,0 +1,14 @@
+SW[0]=PIN_AA23=EN // Enable the clock
+SW[1]=PIN_AB26=nCR // Clear the clock (Active Low)
+SW[2]=PIN_AB25=BellEn // Enable the bell
+SW[3]=PIN_AC27=SetBellMode // Enter the set bell mode
+SW[4]=PIN_AC26=SetMinuteKey // Set minute bell (sync with clk_1Hz)
+SW[5]=PIN_AC24=SetHourKey // Set hour bell (sync with clk_1Hz)
+
+CLK_50=PIN_AD15=CP // 50MHz CLK
+
+KEY[0]=PIN_T29=Adj_M // PushButton of adjust minute of clock (Active Low)
+KEY[2]=PIN_U30=Adj_H // PushButton of adjust hour of clock (Active Low)
+
+LEDR[0]=PIN_AJ6=BellRadio // temporary substitute for bell alarm
+LEDG[0]=PIN_W27=HourRadio // temporary substitute for the alarm that raised when it hits a clock
