@@ -3,8 +3,8 @@ module BellSet(
     input SetHourBellKey, SetMinuteBellKey,
     input [3:0] MinuteH, MinuteL,
     input [3:0] HourH, HourL,
-    output [3:0] MinhBell, HouhBell,
-    output [3:0] MinlBell, HoulBell
+    output reg [3:0] MinhBell, HouhBell,
+    output reg [3:0] MinlBell, HoulBell
 );
     wire MinL_CF, MinH_CF; // Carry Flag
     wire mlEN, mhEN, hEN; // EN of minute, hour bell
@@ -18,11 +18,16 @@ module BellSet(
     
     //here maybe remain some problems
     wire CF_m_add;
-	minuteAdd(CP, SetBellMode,
-              MinuteH, MinuteL, delta_mh, delta_ml,
-              MinhBell, MinlBell, CF_m_add);
-	hourAdd(CP, SetBellMode, CF_m_add, HourH, HourL, delta_hh, delta_hl,
-            HouhBell, HoulBell);
+    always @ (posedge CP or posedge SetBellMode)
+    begin
+		if (SetBellMode) begin
+			minuteAdd(CP, SetBellMode,
+                      MinuteH, MinuteL, delta_mh, delta_ml,
+                      MinhBell, MinlBell, CF_m_add);
+			hourAdd(CP, SetBellMode, CF_m_add, HourH, HourL, delta_hh, delta_hl,
+                    HouhBell, HoulBell);
+        end
+    end
 
 endmodule
 
@@ -44,7 +49,7 @@ endmodule
 module minuteAdd(
     input CP, SetBellMode,
     input [3:0] MinuteH, MinuteL, delta_mh, delta_ml,
-    output reg [3:0] MinhBell, MinlBell, 
+    output [3:0] MinhBell, MinlBell, 
     output CF
 );
     wire CF_ml;
@@ -52,12 +57,10 @@ module minuteAdd(
     assign CF = ((CF_ml + MinuteH + delta_mh) > 5);
     always @ (posedge CP or posedge SetBellMode)
     begin
-        if (SetBellMode) begin
-            if (CF_ml) MinlBell <= MinuteL + delta_ml - 4'ha;
-            else MinlBell <= MinuteL + delta_ml;
-            if (CF) MinhBell <= CF_ml + MinuteH + delta_mh - 4'h6;
-            else MinhBell <= CF_ml + MinuteH + delta_mh;
-        end
+        if (CF_ml) MinlBell <= MinuteL + delta_ml - 4'ha;
+        else MinlBell <= MinuteL + delta_ml;
+        if (CF) MinhBell <= CF_ml + MinuteH + delta_mh - 4'h6;
+        else MinhBell <= CF_ml + MinuteH + delta_mh
     end
     // wire CF_ml;
     // assign CF_ml = ((MinuteL + delta_ml) > 9);
@@ -69,7 +72,7 @@ endmodule
 module hourAdd(
     input CP, SetBellMode, Cin,
     input [3:0] HourH, HourL, delta_hh, delta_hl,
-    output reg [3:0] HouhBell, HoulBell
+    output [3:0] HouhBell, HoulBell
 );
     wire CF_hh0, CF_hl0, CF_hl1;
     assign CF_hh0 = (HourH==4'h0 && delta_hh==4'h0) || (HourH==4'h1 && delta_hh==4'h1); // 00 or 11
@@ -77,24 +80,23 @@ module hourAdd(
     assign CF_hl1 = CF_hh0 && (Cin + HourL + delta_hl > 4'h9);
     always @ (posedge CP or posedge SetBellMode)
     begin
-        if (SetBellMode) begin
-            if (CF_hl0) begin
-                HouhBell <= 4'h0;
-                HoulBell <= Cin + HourL + delta_hl; // high==0 && ++<=9
-            end
-            else if (CF_hl1) begin
-                HouhBell <= 4'h1;
-                HoulBell <= Cin + HourL + delta_hl - 4'ha; // high==0 && ++>9
-            end
-            else if (Cin + HourL + delta_hl < 4'h2) begin
-                HouhBell <= 4'h1;
-                HoulBell <= Cin + HourL + delta_hl;  // high==1 && ++<2
-            end
-            else begin
-                HouhBell <= 4'h0;
-                HoulBell <= Cin + HourL + delta_hl - 4'h2; // high==1 && ++>=2
-            end
+        if (CF_hl0) begin
+            HouhBell <= 4'h0;
+            HoulBell <= Cin + HourL + delta_hl; // high==0 && ++<=9
         end
+        else if (CF_hl1) begin
+            HouhBell <= 4'h1;
+            HoulBell <= Cin + HourL + delta_hl - 4'ha; // high==0 && ++>9
+        end
+        else if (Cin + HourL + delta_hl < 4'h2) begin
+            HouhBell <= 4'h1;
+            HoulBell <= Cin + HourL + delta_hl;  // high==1 && ++<2
+        end
+        else begin
+            HouhBell <= 4'h0;
+            HoulBell <= Cin + HourL + delta_hl - 4'h2; // high==1 && ++>=2
+        end
+
     end
     // assign HoulBell = CF_hl0 ?
     //                   (Cin + HourL + delta_hl)  // high==0 && ++<=9

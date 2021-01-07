@@ -317,7 +317,7 @@ ON
 # case_sensitive
 # source_file
 bellctrl.v
-8c306948de59d413b7a5a45d5ce45e8
+f6327946aefedd29bc97c09f921ce56b
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
@@ -342,7 +342,7 @@ BellSet:Bs0
 
 # end
 # entity
-BellAlarm
+minuteAdd
 # storage
 db|Clock.(9).cnf
 db|Clock.(9).cnf
@@ -353,7 +353,79 @@ ON
 # case_sensitive
 # source_file
 bellctrl.v
-8c306948de59d413b7a5a45d5ce45e8
+f6327946aefedd29bc97c09f921ce56b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+BellSet:Bs0|minuteAdd:comb_13
+}
+# macro_sequence
+
+# end
+# entity
+hourAdd
+# storage
+db|Clock.(10).cnf
+db|Clock.(10).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+bellctrl.v
+f6327946aefedd29bc97c09f921ce56b
+8
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+IGNORE_VERILOG_INITIAL_CONSTRUCTS
+OFF
+VERILOG_CONSTANT_LOOP_LIMIT
+5000
+VERILOG_NON_CONSTANT_LOOP_LIMIT
+250
+}
+# hierarchies {
+BellSet:Bs0|hourAdd:comb_14
+}
+# macro_sequence
+
+# end
+# entity
+BellAlarm
+# storage
+db|Clock.(11).cnf
+db|Clock.(11).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_sensitive
+# source_file
+bellctrl.v
+f6327946aefedd29bc97c09f921ce56b
 8
 # internal_option {
 HDL_INITIAL_FANOUT_LIMIT
