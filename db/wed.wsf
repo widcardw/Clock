@@ -20,14 +20,14 @@ Altera or its authorized distributors.  Please refer to the
 applicable agreement for further details.
 */
 
-VECTOR("C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/db/Clock.sim.cvwf")
+VECTOR("C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.vwf")
 {
 	ZOOM{
-		ZBEGIN = 749471;
+		ZBEGIN = 0;
 		ZEND = 1000000;
-		NUMERATOR = 771;
-		DENOMINATOR = 204617;
-		TOP_INDEX = 4;
+		NUMERATOR = 955;
+		DENOMINATOR = 1000000;
+		TOP_INDEX = 0;
 	}
 	CLOCK{
 		PERIOD = 10000;
@@ -1095,12 +1095,12 @@ VECTOR("C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/db/
 	}
 }
 
-VECTOR("C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/Clock.vwf")
+VECTOR("C:/Users/row31976300/Documents/ForLearning/elc/quartusProjects/Clock/db/Clock.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 172110;
+		ZBEGIN = 0;
 		ZEND = 1000000;
-		NUMERATOR = 1133;
+		NUMERATOR = 1154;
 		DENOMINATOR = 1000000;
 		TOP_INDEX = 0;
 	}
